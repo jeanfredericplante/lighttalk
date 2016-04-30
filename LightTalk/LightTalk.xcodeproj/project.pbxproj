@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F01CD52A85000B3623 /* AppDelegate.swift */; };
+		7EC381F31CD52A85000B3623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F21CD52A85000B3623 /* ViewController.swift */; };
+		7EC381F61CD52A85000B3623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC381F41CD52A85000B3623 /* Main.storyboard */; };
+		7EC381F91CD52A85000B3623 /* LightTalk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F71CD52A85000B3623 /* LightTalk.xcdatamodeld */; };
+		7EC381FB1CD52A85000B3623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC381FA1CD52A85000B3623 /* Assets.xcassets */; };
+		7EC381FE1CD52A85000B3623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC381FC1CD52A85000B3623 /* LaunchScreen.storyboard */; };
+		7EC382091CD52A85000B3623 /* LightTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382081CD52A85000B3623 /* LightTalkTests.swift */; };
+		7EC382141CD52A85000B3623 /* LightTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382131CD52A85000B3623 /* LightTalkUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7EC382051CD52A85000B3623 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EC381E51CD52A85000B3623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EC381EC1CD52A85000B3623;
+			remoteInfo = LightTalk;
+		};
+		7EC382101CD52A85000B3623 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EC381E51CD52A85000B3623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EC381EC1CD52A85000B3623;
+			remoteInfo = LightTalk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7EC381ED1CD52A85000B3623 /* LightTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EC381F01CD52A85000B3623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7EC381F21CD52A85000B3623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EC381F51CD52A85000B3623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7EC381F81CD52A85000B3623 /* LightTalk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LightTalk.xcdatamodel; sourceTree = "<group>"; };
+		7EC381FA1CD52A85000B3623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7EC381FD1CD52A85000B3623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7EC381FF1CD52A85000B3623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EC382041CD52A85000B3623 /* LightTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EC382081CD52A85000B3623 /* LightTalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTalkTests.swift; sourceTree = "<group>"; };
+		7EC3820A1CD52A85000B3623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EC3820F1CD52A85000B3623 /* LightTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EC382131CD52A85000B3623 /* LightTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTalkUITests.swift; sourceTree = "<group>"; };
+		7EC382151CD52A85000B3623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EC381EA1CD52A85000B3623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC382011CD52A85000B3623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC3820C1CD52A85000B3623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EC381E41CD52A85000B3623 = {
+			isa = PBXGroup;
+			children = (
+				7EC381EF1CD52A85000B3623 /* LightTalk */,
+				7EC382071CD52A85000B3623 /* LightTalkTests */,
+				7EC382121CD52A85000B3623 /* LightTalkUITests */,
+				7EC381EE1CD52A85000B3623 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EC381EE1CD52A85000B3623 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EC381ED1CD52A85000B3623 /* LightTalk.app */,
+				7EC382041CD52A85000B3623 /* LightTalkTests.xctest */,
+				7EC3820F1CD52A85000B3623 /* LightTalkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EC381EF1CD52A85000B3623 /* LightTalk */ = {
+			isa = PBXGroup;
+			children = (
+				7EC381F01CD52A85000B3623 /* AppDelegate.swift */,
+				7EC381F21CD52A85000B3623 /* ViewController.swift */,
+				7EC381F41CD52A85000B3623 /* Main.storyboard */,
+				7EC381FA1CD52A85000B3623 /* Assets.xcassets */,
+				7EC381FC1CD52A85000B3623 /* LaunchScreen.storyboard */,
+				7EC381FF1CD52A85000B3623 /* Info.plist */,
+				7EC381F71CD52A85000B3623 /* LightTalk.xcdatamodeld */,
+			);
+			path = LightTalk;
+			sourceTree = "<group>";
+		};
+		7EC382071CD52A85000B3623 /* LightTalkTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EC382081CD52A85000B3623 /* LightTalkTests.swift */,
+				7EC3820A1CD52A85000B3623 /* Info.plist */,
+			);
+			path = LightTalkTests;
+			sourceTree = "<group>";
+		};
+		7EC382121CD52A85000B3623 /* LightTalkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7EC382131CD52A85000B3623 /* LightTalkUITests.swift */,
+				7EC382151CD52A85000B3623 /* Info.plist */,
+			);
+			path = LightTalkUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EC381EC1CD52A85000B3623 /* LightTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EC382181CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalk" */;
+			buildPhases = (
+				7EC381E91CD52A85000B3623 /* Sources */,
+				7EC381EA1CD52A85000B3623 /* Frameworks */,
+				7EC381EB1CD52A85000B3623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LightTalk;
+			productName = LightTalk;
+			productReference = 7EC381ED1CD52A85000B3623 /* LightTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7EC382031CD52A85000B3623 /* LightTalkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EC3821B1CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalkTests" */;
+			buildPhases = (
+				7EC382001CD52A85000B3623 /* Sources */,
+				7EC382011CD52A85000B3623 /* Frameworks */,
+				7EC382021CD52A85000B3623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EC382061CD52A85000B3623 /* PBXTargetDependency */,
+			);
+			name = LightTalkTests;
+			productName = LightTalkTests;
+			productReference = 7EC382041CD52A85000B3623 /* LightTalkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7EC3820E1CD52A85000B3623 /* LightTalkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EC3821E1CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalkUITests" */;
+			buildPhases = (
+				7EC3820B1CD52A85000B3623 /* Sources */,
+				7EC3820C1CD52A85000B3623 /* Frameworks */,
+				7EC3820D1CD52A85000B3623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EC382111CD52A85000B3623 /* PBXTargetDependency */,
+			);
+			name = LightTalkUITests;
+			productName = LightTalkUITests;
+			productReference = 7EC3820F1CD52A85000B3623 /* LightTalkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EC381E51CD52A85000B3623 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jean Frederic Plante";
+				TargetAttributes = {
+					7EC381EC1CD52A85000B3623 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					7EC382031CD52A85000B3623 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7EC381EC1CD52A85000B3623;
+					};
+					7EC3820E1CD52A85000B3623 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7EC381EC1CD52A85000B3623;
+					};
+				};
+			};
+			buildConfigurationList = 7EC381E81CD52A85000B3623 /* Build configuration list for PBXProject "LightTalk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7EC381E41CD52A85000B3623;
+			productRefGroup = 7EC381EE1CD52A85000B3623 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EC381EC1CD52A85000B3623 /* LightTalk */,
+				7EC382031CD52A85000B3623 /* LightTalkTests */,
+				7EC3820E1CD52A85000B3623 /* LightTalkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EC381EB1CD52A85000B3623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC381FE1CD52A85000B3623 /* LaunchScreen.storyboard in Resources */,
+				7EC381FB1CD52A85000B3623 /* Assets.xcassets in Resources */,
+				7EC381F61CD52A85000B3623 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC382021CD52A85000B3623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC3820D1CD52A85000B3623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EC381E91CD52A85000B3623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC381F31CD52A85000B3623 /* ViewController.swift in Sources */,
+				7EC381F91CD52A85000B3623 /* LightTalk.xcdatamodeld in Sources */,
+				7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC382001CD52A85000B3623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC382091CD52A85000B3623 /* LightTalkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC3820B1CD52A85000B3623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC382141CD52A85000B3623 /* LightTalkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7EC382061CD52A85000B3623 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EC381EC1CD52A85000B3623 /* LightTalk */;
+			targetProxy = 7EC382051CD52A85000B3623 /* PBXContainerItemProxy */;
+		};
+		7EC382111CD52A85000B3623 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EC381EC1CD52A85000B3623 /* LightTalk */;
+			targetProxy = 7EC382101CD52A85000B3623 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7EC381F41CD52A85000B3623 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EC381F51CD52A85000B3623 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7EC381FC1CD52A85000B3623 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EC381FD1CD52A85000B3623 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EC382161CD52A85000B3623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EC382171CD52A85000B3623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EC382191CD52A85000B3623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LightTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7EC3821A1CD52A85000B3623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LightTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7EC3821C1CD52A85000B3623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LightTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LightTalk.app/LightTalk";
+			};
+			name = Debug;
+		};
+		7EC3821D1CD52A85000B3623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LightTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LightTalk.app/LightTalk";
+			};
+			name = Release;
+		};
+		7EC3821F1CD52A85000B3623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LightTalkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LightTalk;
+			};
+			name = Debug;
+		};
+		7EC382201CD52A85000B3623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LightTalkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LightTalk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EC381E81CD52A85000B3623 /* Build configuration list for PBXProject "LightTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC382161CD52A85000B3623 /* Debug */,
+				7EC382171CD52A85000B3623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EC382181CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC382191CD52A85000B3623 /* Debug */,
+				7EC3821A1CD52A85000B3623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7EC3821B1CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC3821C1CD52A85000B3623 /* Debug */,
+				7EC3821D1CD52A85000B3623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7EC3821E1CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC3821F1CD52A85000B3623 /* Debug */,
+				7EC382201CD52A85000B3623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7EC381F71CD52A85000B3623 /* LightTalk.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7EC381F81CD52A85000B3623 /* LightTalk.xcdatamodel */,
+			);
+			currentVersion = 7EC381F81CD52A85000B3623 /* LightTalk.xcdatamodel */;
+			path = LightTalk.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7EC381E51CD52A85000B3623 /* Project object */;
+}
