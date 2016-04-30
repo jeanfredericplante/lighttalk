@@ -22,7 +22,19 @@ class FlashController {
     }
     
     func getCameraWithTorch() -> AVCaptureDevice? {
-        return nil
+        let devices = AVCaptureDevice.devices()
+        var detectedCamera: AVCaptureDevice?
+        
+        // Loop through all the capture devices on this phone
+        for device in devices {
+            // Make sure this particular device supports video
+            if (device.hasMediaType(AVMediaTypeVideo)) {
+                if let hasTorch = device.hasTorch where hasTorch {
+                    detectedCamera = device as? AVCaptureDevice
+                }
+            }
+        }
+        return detectedCamera
     }
     
     
