@@ -15,8 +15,8 @@
 		7EC381FE1CD52A85000B3623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC381FC1CD52A85000B3623 /* LaunchScreen.storyboard */; };
 		7EC382091CD52A85000B3623 /* LightTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382081CD52A85000B3623 /* LightTalkTests.swift */; };
 		7EC382141CD52A85000B3623 /* LightTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382131CD52A85000B3623 /* LightTalkUITests.swift */; };
-		7EC382221CD52CE3000B3623 /* FlashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382211CD52CE3000B3623 /* FlashController.swift */; };
 		7EC382241CD696A2000B3623 /* CameraAndFlashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */; };
+		7EC382261CD6AAFE000B3623 /* DebugHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382251CD6AAFE000B3623 /* DebugHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,8 @@
 		7EC3820F1CD52A85000B3623 /* LightTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC382131CD52A85000B3623 /* LightTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTalkUITests.swift; sourceTree = "<group>"; };
 		7EC382151CD52A85000B3623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EC382211CD52CE3000B3623 /* FlashController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashController.swift; sourceTree = "<group>"; };
 		7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraAndFlashController.swift; sourceTree = "<group>"; };
+		7EC382251CD6AAFE000B3623 /* DebugHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +103,8 @@
 		7EC381EF1CD52A85000B3623 /* LightTalk */ = {
 			isa = PBXGroup;
 			children = (
+				7EC382281CD6AB19000B3623 /* Controllers */,
+				7EC382271CD6AB0E000B3623 /* Helpers */,
 				7EC381F01CD52A85000B3623 /* AppDelegate.swift */,
 				7EC381F21CD52A85000B3623 /* ViewController.swift */,
 				7EC381F41CD52A85000B3623 /* Main.storyboard */,
@@ -110,8 +112,6 @@
 				7EC381FC1CD52A85000B3623 /* LaunchScreen.storyboard */,
 				7EC381FF1CD52A85000B3623 /* Info.plist */,
 				7EC381F71CD52A85000B3623 /* LightTalk.xcdatamodeld */,
-				7EC382211CD52CE3000B3623 /* FlashController.swift */,
-				7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */,
 			);
 			path = LightTalk;
 			sourceTree = "<group>";
@@ -132,6 +132,22 @@
 				7EC382151CD52A85000B3623 /* Info.plist */,
 			);
 			path = LightTalkUITests;
+			sourceTree = "<group>";
+		};
+		7EC382271CD6AB0E000B3623 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7EC382251CD6AAFE000B3623 /* DebugHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		7EC382281CD6AB19000B3623 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +283,9 @@
 			files = (
 				7EC381F31CD52A85000B3623 /* ViewController.swift in Sources */,
 				7EC381F91CD52A85000B3623 /* LightTalk.xcdatamodeld in Sources */,
-				7EC382221CD52CE3000B3623 /* FlashController.swift in Sources */,
 				7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */,
 				7EC382241CD696A2000B3623 /* CameraAndFlashController.swift in Sources */,
+				7EC382261CD6AAFE000B3623 /* DebugHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

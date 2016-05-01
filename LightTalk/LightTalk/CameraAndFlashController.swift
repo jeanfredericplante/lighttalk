@@ -39,13 +39,12 @@ class CameraAndFlashController {
         return detectedCamera
     }
     
-    func setTorchLevel(level: Double, withDurationInMs: Int) {
-        
-        let durationInSeconds: UInt32 = UInt32(withDurationInMs * 1000)
+    
+    func addTorchLevelToQueue(level: Double) {
         
         torchQueue.addOperationWithBlock({
             self.setTorchLevel(level)
-            usleep(durationInSeconds)
+            
         })
         
     }
