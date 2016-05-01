@@ -16,6 +16,7 @@
 		7EC382091CD52A85000B3623 /* LightTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382081CD52A85000B3623 /* LightTalkTests.swift */; };
 		7EC382141CD52A85000B3623 /* LightTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382131CD52A85000B3623 /* LightTalkUITests.swift */; };
 		7EC382221CD52CE3000B3623 /* FlashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382211CD52CE3000B3623 /* FlashController.swift */; };
+		7EC382241CD696A2000B3623 /* CameraAndFlashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7EC382131CD52A85000B3623 /* LightTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTalkUITests.swift; sourceTree = "<group>"; };
 		7EC382151CD52A85000B3623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EC382211CD52CE3000B3623 /* FlashController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashController.swift; sourceTree = "<group>"; };
+		7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraAndFlashController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				7EC381FF1CD52A85000B3623 /* Info.plist */,
 				7EC381F71CD52A85000B3623 /* LightTalk.xcdatamodeld */,
 				7EC382211CD52CE3000B3623 /* FlashController.swift */,
+				7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */,
 			);
 			path = LightTalk;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				7EC381F91CD52A85000B3623 /* LightTalk.xcdatamodeld in Sources */,
 				7EC382221CD52CE3000B3623 /* FlashController.swift in Sources */,
 				7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */,
+				7EC382241CD696A2000B3623 /* CameraAndFlashController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
