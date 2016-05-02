@@ -44,7 +44,7 @@ class CameraAndFlashController {
         
         torchQueue.addOperationWithBlock({
             self.setTorchLevel(level)
-            
+            printDebug("change torch level", withTime: true)
         })
         
     }
