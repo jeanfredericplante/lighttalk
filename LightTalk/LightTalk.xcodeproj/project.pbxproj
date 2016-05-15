@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EB904A21CE78BD200E8E47C /* ManualFlashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */; };
 		7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F01CD52A85000B3623 /* AppDelegate.swift */; };
 		7EC381F31CD52A85000B3623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F21CD52A85000B3623 /* ViewController.swift */; };
 		7EC381F61CD52A85000B3623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC381F41CD52A85000B3623 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualFlashViewController.swift; sourceTree = "<group>"; };
 		7EC381ED1CD52A85000B3623 /* LightTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC381F01CD52A85000B3623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC381F21CD52A85000B3623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +108,6 @@
 				7EC382281CD6AB19000B3623 /* Controllers */,
 				7EC382271CD6AB0E000B3623 /* Helpers */,
 				7EC381F01CD52A85000B3623 /* AppDelegate.swift */,
-				7EC381F21CD52A85000B3623 /* ViewController.swift */,
 				7EC381F41CD52A85000B3623 /* Main.storyboard */,
 				7EC381FA1CD52A85000B3623 /* Assets.xcassets */,
 				7EC381FC1CD52A85000B3623 /* LaunchScreen.storyboard */,
@@ -145,6 +146,8 @@
 		7EC382281CD6AB19000B3623 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7EC381F21CD52A85000B3623 /* ViewController.swift */,
+				7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */,
 				7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */,
 			);
 			name = Controllers;
@@ -286,6 +289,7 @@
 				7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */,
 				7EC382241CD696A2000B3623 /* CameraAndFlashController.swift in Sources */,
 				7EC382261CD6AAFE000B3623 /* DebugHelper.swift in Sources */,
+				7EB904A21CE78BD200E8E47C /* ManualFlashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +516,7 @@
 				7EC3821A1CD52A85000B3623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EC3821B1CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalkTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +525,7 @@
 				7EC3821D1CD52A85000B3623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EC3821E1CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalkUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +534,7 @@
 				7EC382201CD52A85000B3623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
