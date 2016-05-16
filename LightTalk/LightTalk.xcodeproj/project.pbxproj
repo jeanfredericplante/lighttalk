@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E42DC301CE99CA7005906BA /* CharacterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E42DC2F1CE99CA7005906BA /* CharacterEncoder.swift */; };
 		7EB904A21CE78BD200E8E47C /* ManualFlashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */; };
 		7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F01CD52A85000B3623 /* AppDelegate.swift */; };
 		7EC381F31CD52A85000B3623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F21CD52A85000B3623 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E42DC2F1CE99CA7005906BA /* CharacterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterEncoder.swift; sourceTree = "<group>"; };
 		7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualFlashViewController.swift; sourceTree = "<group>"; };
 		7EC381ED1CD52A85000B3623 /* LightTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC381F01CD52A85000B3623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				7EC381F21CD52A85000B3623 /* ViewController.swift */,
 				7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */,
+				7E42DC2F1CE99CA7005906BA /* CharacterEncoder.swift */,
 				7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */,
 			);
 			name = Controllers;
@@ -287,6 +290,7 @@
 				7EC381F31CD52A85000B3623 /* ViewController.swift in Sources */,
 				7EC381F91CD52A85000B3623 /* LightTalk.xcdatamodeld in Sources */,
 				7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */,
+				7E42DC301CE99CA7005906BA /* CharacterEncoder.swift in Sources */,
 				7EC382241CD696A2000B3623 /* CameraAndFlashController.swift in Sources */,
 				7EC382261CD6AAFE000B3623 /* DebugHelper.swift in Sources */,
 				7EB904A21CE78BD200E8E47C /* ManualFlashViewController.swift in Sources */,
