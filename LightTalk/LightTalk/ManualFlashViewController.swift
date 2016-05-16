@@ -30,7 +30,6 @@ class ManualFlashViewController: UIViewController {
         if !flashManager.hasTorch {
             flashSwitch.enabled = false
             flashSwitch.setOn(false, animated: false)
-            flashLevel.text = "not available"
         }
         updateFlashState()
 
@@ -43,6 +42,11 @@ class ManualFlashViewController: UIViewController {
     }
     
     func updateFlashState() {
+        guard flashManager.hasTorch else {
+            flashLevel.text = "not available"
+            return
+        }
+        
         if flashSwitch.on {
             flashManager.setTorchLevel(Double(flashSliderLevel.value))
         } else {

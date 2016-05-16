@@ -14,7 +14,7 @@ class CameraAndFlashController {
     
     var cameraWithTorch: AVCaptureDevice?
     var hasTorch: Bool {
-        return cameraWithTorch == nil
+        return cameraWithTorch != nil
     }
     private let torchQueue = NSOperationQueue()
 
@@ -55,15 +55,16 @@ class CameraAndFlashController {
         torchLevel = min(torchLevel, AVCaptureMaxAvailableTorchLevel)
         
         guard let cameraWithTorch = cameraWithTorch else { return }
-        guard torchLevel > 0  else {
-            cameraWithTorch.torchMode = .Off
-            return
-        }
-        
+               
         do {
             try cameraWithTorch.lockForConfiguration()
-            try cameraWithTorch.setTorchModeOnWithLevel(torchLevel)
+            if torchLevel > 0 {
+                try cameraWithTorch.setTorchModeOnWithLevel(torchLevel)
+            } else {
+                cameraWithTorch.torchMode = .Off
+            }
             cameraWithTorch.unlockForConfiguration()
+            
         } catch let err as NSError {
             print("Error setting torch level:", err.debugDescription)
         }
