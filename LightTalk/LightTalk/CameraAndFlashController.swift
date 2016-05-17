@@ -9,6 +9,10 @@
 import Foundation
 import AVFoundation
 
+enum FlashLevel: Float {
+    case Zero = 0.0, One = 0.25, Two = 0.5, Three = 0.75, Four = 1.0
+}
+
 
 class CameraAndFlashController {
     
