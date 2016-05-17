@@ -24,9 +24,18 @@ class StringEncodingTest: XCTestCase {
     }
 
     func testCharacterEncoding() {
+        // default is 1 bit level
         encoder.setMessage("l")
         XCTAssertNotNil(encoder.getBits())
         XCTAssertEqual(encoder.getBits()!, [0,1,1,0,1,1,0,0] )
+        encoder.setMessage(" ")
+        XCTAssertEqual(encoder.getBits()!, [0,0,1,0,0,0,0,0] )
+
+        // testing with 2 bits levels
+        encoder.setEncodingLevels(2)
+        encoder.setMessage(" ")
+        XCTAssertEqual(encoder.getBits()!, [0,2,0,0] )
+
         
     }
 
