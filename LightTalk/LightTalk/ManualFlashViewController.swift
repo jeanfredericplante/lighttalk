@@ -12,6 +12,7 @@ class ManualFlashViewController: UIViewController {
 
     @IBOutlet weak var messageInput: UITextField!
     @IBAction func messageSendPressed(sender: UIButton) {
+        sendMessage()
     }
     @IBOutlet weak var flashSwitch: UISwitch!
     @IBOutlet weak var flashLevel: UILabel!
@@ -57,6 +58,22 @@ class ManualFlashViewController: UIViewController {
         }
         flashLevel.text = "\(Int(flashSliderLevel.value * 100))%"
 
+    }
+    
+    
+    func sendMessage() {
+        if let message = messageInput.text {
+            print("sending message \(message)")
+            let encoder = CharacterEncoder()
+            encoder.setMessage(message)
+            if let levels = encoder.getBits() {
+                for l in levels {
+                    printDebug("sending flash level \(l)", withTime: true)
+                    flashManager.setTorchLevel(Double(l))
+
+                }
+            }
+        }
     }
     
 

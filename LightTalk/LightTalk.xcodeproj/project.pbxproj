@@ -1,1300 +1,647 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>223C26C3641D01085CE7EE56</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>3592AD720B986DEEF41E6B24</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>51135A451C1E948AF188146A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B1F8A56A0BDC222CD7F257C0</string>
-				<string>68D4FE7A675C94624AD47A2F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>68D4FE7A675C94624AD47A2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E42DC2F1CE99CA7005906BA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CharacterEncoder.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E42DC301CE99CA7005906BA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E42DC2F1CE99CA7005906BA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EB904A11CE78BD200E8E47C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ManualFlashViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EB904A21CE78BD200E8E47C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EB904A11CE78BD200E8E47C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EC381E41CD52A85000B3623</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7EC381EF1CD52A85000B3623</string>
-				<string>7EC382071CD52A85000B3623</string>
-				<string>7EC382121CD52A85000B3623</string>
-				<string>7EC381EE1CD52A85000B3623</string>
-				<string>51135A451C1E948AF188146A</string>
-				<string>8D3178EAB42689E892B05EFE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC381E51CD52A85000B3623</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Jean Frederic Plante</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>7EC381EC1CD52A85000B3623</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-					</dict>
-					<key>7EC382031CD52A85000B3623</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>TestTargetID</key>
-						<string>7EC381EC1CD52A85000B3623</string>
-					</dict>
-					<key>7EC3820E1CD52A85000B3623</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>TestTargetID</key>
-						<string>7EC381EC1CD52A85000B3623</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>7EC381E81CD52A85000B3623</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7EC381E41CD52A85000B3623</string>
-			<key>productRefGroup</key>
-			<string>7EC381EE1CD52A85000B3623</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>7EC381EC1CD52A85000B3623</string>
-				<string>7EC382031CD52A85000B3623</string>
-				<string>7EC3820E1CD52A85000B3623</string>
-			</array>
-		</dict>
-		<key>7EC381E81CD52A85000B3623</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7EC382161CD52A85000B3623</string>
-				<string>7EC382171CD52A85000B3623</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7EC381E91CD52A85000B3623</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7EC381F31CD52A85000B3623</string>
-				<string>7EC381F91CD52A85000B3623</string>
-				<string>7EC381F11CD52A85000B3623</string>
-				<string>7E42DC301CE99CA7005906BA</string>
-				<string>7EC382241CD696A2000B3623</string>
-				<string>7EC382261CD6AAFE000B3623</string>
-				<string>7EB904A21CE78BD200E8E47C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7EC381EA1CD52A85000B3623</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A4EB0C0969F5FCF215802FD0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7EC381EB1CD52A85000B3623</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7EC381FE1CD52A85000B3623</string>
-				<string>7EC381FB1CD52A85000B3623</string>
-				<string>7EC381F61CD52A85000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7EC381EC1CD52A85000B3623</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7EC382181CD52A85000B3623</string>
-			<key>buildPhases</key>
-			<array>
-				<string>93F54E793EAC48A91A798D4C</string>
-				<string>7EC381E91CD52A85000B3623</string>
-				<string>7EC381EA1CD52A85000B3623</string>
-				<string>7EC381EB1CD52A85000B3623</string>
-				<string>223C26C3641D01085CE7EE56</string>
-				<string>9F3444D0A01D017ADEBE544E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>LightTalk</string>
-			<key>productName</key>
-			<string>LightTalk</string>
-			<key>productReference</key>
-			<string>7EC381ED1CD52A85000B3623</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>7EC381ED1CD52A85000B3623</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>LightTalk.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7EC381EE1CD52A85000B3623</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7EC381ED1CD52A85000B3623</string>
-				<string>7EC382041CD52A85000B3623</string>
-				<string>7EC3820F1CD52A85000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC381EF1CD52A85000B3623</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7EC382281CD6AB19000B3623</string>
-				<string>7EC382271CD6AB0E000B3623</string>
-				<string>7EC381F01CD52A85000B3623</string>
-				<string>7EC381F41CD52A85000B3623</string>
-				<string>7EC381FA1CD52A85000B3623</string>
-				<string>7EC381FC1CD52A85000B3623</string>
-				<string>7EC381FF1CD52A85000B3623</string>
-				<string>7EC381F71CD52A85000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>LightTalk</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC381F01CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC381F11CD52A85000B3623</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EC381F01CD52A85000B3623</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EC381F21CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC381F31CD52A85000B3623</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EC381F21CD52A85000B3623</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EC381F41CD52A85000B3623</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7EC381F51CD52A85000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC381F51CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC381F61CD52A85000B3623</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EC381F41CD52A85000B3623</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EC381F71CD52A85000B3623</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7EC381F81CD52A85000B3623</string>
-			</array>
-			<key>currentVersion</key>
-			<string>7EC381F81CD52A85000B3623</string>
-			<key>isa</key>
-			<string>XCVersionGroup</string>
-			<key>path</key>
-			<string>LightTalk.xcdatamodeld</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>versionGroupType</key>
-			<string>wrapper.xcdatamodel</string>
-		</dict>
-		<key>7EC381F81CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.xcdatamodel</string>
-			<key>path</key>
-			<string>LightTalk.xcdatamodel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC381F91CD52A85000B3623</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EC381F71CD52A85000B3623</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EC381FA1CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC381FB1CD52A85000B3623</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EC381FA1CD52A85000B3623</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EC381FC1CD52A85000B3623</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7EC381FD1CD52A85000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC381FD1CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC381FE1CD52A85000B3623</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EC381FC1CD52A85000B3623</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EC381FF1CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC382001CD52A85000B3623</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7EC382091CD52A85000B3623</string>
-				<string>95EE62931CEA545A00A9AF99</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7EC382011CD52A85000B3623</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7EC382021CD52A85000B3623</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7EC382031CD52A85000B3623</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7EC3821B1CD52A85000B3623</string>
-			<key>buildPhases</key>
-			<array>
-				<string>7EC382001CD52A85000B3623</string>
-				<string>7EC382011CD52A85000B3623</string>
-				<string>7EC382021CD52A85000B3623</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>7EC382061CD52A85000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>LightTalkTests</string>
-			<key>productName</key>
-			<string>LightTalkTests</string>
-			<key>productReference</key>
-			<string>7EC382041CD52A85000B3623</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>7EC382041CD52A85000B3623</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>LightTalkTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7EC382051CD52A85000B3623</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>7EC381E51CD52A85000B3623</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>7EC381EC1CD52A85000B3623</string>
-			<key>remoteInfo</key>
-			<string>LightTalk</string>
-		</dict>
-		<key>7EC382061CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>7EC381EC1CD52A85000B3623</string>
-			<key>targetProxy</key>
-			<string>7EC382051CD52A85000B3623</string>
-		</dict>
-		<key>7EC382071CD52A85000B3623</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7EC382081CD52A85000B3623</string>
-				<string>95EE62921CEA545A00A9AF99</string>
-				<string>7EC3820A1CD52A85000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>LightTalkTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC382081CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LightTalkTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC382091CD52A85000B3623</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EC382081CD52A85000B3623</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EC3820A1CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC3820B1CD52A85000B3623</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7EC382141CD52A85000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7EC3820C1CD52A85000B3623</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7EC3820D1CD52A85000B3623</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7EC3820E1CD52A85000B3623</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7EC3821E1CD52A85000B3623</string>
-			<key>buildPhases</key>
-			<array>
-				<string>7EC3820B1CD52A85000B3623</string>
-				<string>7EC3820C1CD52A85000B3623</string>
-				<string>7EC3820D1CD52A85000B3623</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>7EC382111CD52A85000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>LightTalkUITests</string>
-			<key>productName</key>
-			<string>LightTalkUITests</string>
-			<key>productReference</key>
-			<string>7EC3820F1CD52A85000B3623</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>7EC3820F1CD52A85000B3623</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>LightTalkUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7EC382101CD52A85000B3623</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>7EC381E51CD52A85000B3623</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>7EC381EC1CD52A85000B3623</string>
-			<key>remoteInfo</key>
-			<string>LightTalk</string>
-		</dict>
-		<key>7EC382111CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>7EC381EC1CD52A85000B3623</string>
-			<key>targetProxy</key>
-			<string>7EC382101CD52A85000B3623</string>
-		</dict>
-		<key>7EC382121CD52A85000B3623</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7EC382131CD52A85000B3623</string>
-				<string>7EC382151CD52A85000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>LightTalkUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC382131CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LightTalkUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC382141CD52A85000B3623</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EC382131CD52A85000B3623</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EC382151CD52A85000B3623</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC382161CD52A85000B3623</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7EC382171CD52A85000B3623</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7EC382181CD52A85000B3623</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7EC382191CD52A85000B3623</string>
-				<string>7EC3821A1CD52A85000B3623</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7EC382191CD52A85000B3623</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B1F8A56A0BDC222CD7F257C0</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>LightTalk/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jfplante.LightTalk</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7EC3821A1CD52A85000B3623</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>68D4FE7A675C94624AD47A2F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>LightTalk/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jfplante.LightTalk</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7EC3821B1CD52A85000B3623</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7EC3821C1CD52A85000B3623</string>
-				<string>7EC3821D1CD52A85000B3623</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7EC3821C1CD52A85000B3623</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>LightTalkTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jfplante.LightTalkTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/LightTalk.app/LightTalk</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7EC3821D1CD52A85000B3623</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>LightTalkTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jfplante.LightTalkTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/LightTalk.app/LightTalk</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7EC3821E1CD52A85000B3623</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7EC3821F1CD52A85000B3623</string>
-				<string>7EC382201CD52A85000B3623</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7EC3821F1CD52A85000B3623</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>LightTalkUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jfplante.LightTalkUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>LightTalk</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7EC382201CD52A85000B3623</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>LightTalkUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jfplante.LightTalkUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>LightTalk</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7EC382231CD696A2000B3623</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CameraAndFlashController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC382241CD696A2000B3623</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EC382231CD696A2000B3623</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EC382251CD6AAFE000B3623</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DebugHelper.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC382261CD6AAFE000B3623</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EC382251CD6AAFE000B3623</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EC382271CD6AB0E000B3623</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7EC382251CD6AAFE000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Helpers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC382281CD6AB19000B3623</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7EC381F21CD52A85000B3623</string>
-				<string>7EB904A11CE78BD200E8E47C</string>
-				<string>7E42DC2F1CE99CA7005906BA</string>
-				<string>7EC382231CD696A2000B3623</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Controllers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D3178EAB42689E892B05EFE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3592AD720B986DEEF41E6B24</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>93F54E793EAC48A91A798D4C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>95EE62921CEA545A00A9AF99</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>StringEncodingTest.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>95EE62931CEA545A00A9AF99</key>
-		<dict>
-			<key>fileRef</key>
-			<string>95EE62921CEA545A00A9AF99</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9F3444D0A01D017ADEBE544E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>A4EB0C0969F5FCF215802FD0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3592AD720B986DEEF41E6B24</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B1F8A56A0BDC222CD7F257C0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>7EC381E51CD52A85000B3623</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E42DC301CE99CA7005906BA /* CharacterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E42DC2F1CE99CA7005906BA /* CharacterEncoder.swift */; };
+		7EB904A21CE78BD200E8E47C /* ManualFlashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */; };
+		7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F01CD52A85000B3623 /* AppDelegate.swift */; };
+		7EC381F31CD52A85000B3623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F21CD52A85000B3623 /* ViewController.swift */; };
+		7EC381F61CD52A85000B3623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC381F41CD52A85000B3623 /* Main.storyboard */; };
+		7EC381F91CD52A85000B3623 /* LightTalk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F71CD52A85000B3623 /* LightTalk.xcdatamodeld */; };
+		7EC381FB1CD52A85000B3623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC381FA1CD52A85000B3623 /* Assets.xcassets */; };
+		7EC381FE1CD52A85000B3623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC381FC1CD52A85000B3623 /* LaunchScreen.storyboard */; };
+		7EC382091CD52A85000B3623 /* LightTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382081CD52A85000B3623 /* LightTalkTests.swift */; };
+		7EC382141CD52A85000B3623 /* LightTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382131CD52A85000B3623 /* LightTalkUITests.swift */; };
+		7EC382241CD696A2000B3623 /* CameraAndFlashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */; };
+		7EC382261CD6AAFE000B3623 /* DebugHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382251CD6AAFE000B3623 /* DebugHelper.swift */; };
+		95EE62931CEA545A00A9AF99 /* StringEncodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE62921CEA545A00A9AF99 /* StringEncodingTest.swift */; };
+		A4EB0C0969F5FCF215802FD0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3592AD720B986DEEF41E6B24 /* Pods.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7EC382051CD52A85000B3623 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EC381E51CD52A85000B3623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EC381EC1CD52A85000B3623;
+			remoteInfo = LightTalk;
+		};
+		7EC382101CD52A85000B3623 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EC381E51CD52A85000B3623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EC381EC1CD52A85000B3623;
+			remoteInfo = LightTalk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3592AD720B986DEEF41E6B24 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68D4FE7A675C94624AD47A2F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7E42DC2F1CE99CA7005906BA /* CharacterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterEncoder.swift; sourceTree = "<group>"; };
+		7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualFlashViewController.swift; sourceTree = "<group>"; };
+		7EC381ED1CD52A85000B3623 /* LightTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EC381F01CD52A85000B3623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7EC381F21CD52A85000B3623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EC381F51CD52A85000B3623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7EC381F81CD52A85000B3623 /* LightTalk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LightTalk.xcdatamodel; sourceTree = "<group>"; };
+		7EC381FA1CD52A85000B3623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7EC381FD1CD52A85000B3623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7EC381FF1CD52A85000B3623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EC382041CD52A85000B3623 /* LightTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EC382081CD52A85000B3623 /* LightTalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTalkTests.swift; sourceTree = "<group>"; };
+		7EC3820A1CD52A85000B3623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EC3820F1CD52A85000B3623 /* LightTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EC382131CD52A85000B3623 /* LightTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTalkUITests.swift; sourceTree = "<group>"; };
+		7EC382151CD52A85000B3623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraAndFlashController.swift; sourceTree = "<group>"; };
+		7EC382251CD6AAFE000B3623 /* DebugHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugHelper.swift; sourceTree = "<group>"; };
+		95EE62921CEA545A00A9AF99 /* StringEncodingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEncodingTest.swift; sourceTree = "<group>"; };
+		B1F8A56A0BDC222CD7F257C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EC381EA1CD52A85000B3623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4EB0C0969F5FCF215802FD0 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC382011CD52A85000B3623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC3820C1CD52A85000B3623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51135A451C1E948AF188146A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1F8A56A0BDC222CD7F257C0 /* Pods.debug.xcconfig */,
+				68D4FE7A675C94624AD47A2F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7EC381E41CD52A85000B3623 = {
+			isa = PBXGroup;
+			children = (
+				7EC381EF1CD52A85000B3623 /* LightTalk */,
+				7EC382071CD52A85000B3623 /* LightTalkTests */,
+				7EC382121CD52A85000B3623 /* LightTalkUITests */,
+				7EC381EE1CD52A85000B3623 /* Products */,
+				51135A451C1E948AF188146A /* Pods */,
+				8D3178EAB42689E892B05EFE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7EC381EE1CD52A85000B3623 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EC381ED1CD52A85000B3623 /* LightTalk.app */,
+				7EC382041CD52A85000B3623 /* LightTalkTests.xctest */,
+				7EC3820F1CD52A85000B3623 /* LightTalkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EC381EF1CD52A85000B3623 /* LightTalk */ = {
+			isa = PBXGroup;
+			children = (
+				7EC382281CD6AB19000B3623 /* Controllers */,
+				7EC382271CD6AB0E000B3623 /* Helpers */,
+				7EC381F01CD52A85000B3623 /* AppDelegate.swift */,
+				7EC381F41CD52A85000B3623 /* Main.storyboard */,
+				7EC381FA1CD52A85000B3623 /* Assets.xcassets */,
+				7EC381FC1CD52A85000B3623 /* LaunchScreen.storyboard */,
+				7EC381FF1CD52A85000B3623 /* Info.plist */,
+				7EC381F71CD52A85000B3623 /* LightTalk.xcdatamodeld */,
+			);
+			path = LightTalk;
+			sourceTree = "<group>";
+		};
+		7EC382071CD52A85000B3623 /* LightTalkTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EC382081CD52A85000B3623 /* LightTalkTests.swift */,
+				95EE62921CEA545A00A9AF99 /* StringEncodingTest.swift */,
+				7EC3820A1CD52A85000B3623 /* Info.plist */,
+			);
+			path = LightTalkTests;
+			sourceTree = "<group>";
+		};
+		7EC382121CD52A85000B3623 /* LightTalkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7EC382131CD52A85000B3623 /* LightTalkUITests.swift */,
+				7EC382151CD52A85000B3623 /* Info.plist */,
+			);
+			path = LightTalkUITests;
+			sourceTree = "<group>";
+		};
+		7EC382271CD6AB0E000B3623 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7EC382251CD6AAFE000B3623 /* DebugHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		7EC382281CD6AB19000B3623 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7EC381F21CD52A85000B3623 /* ViewController.swift */,
+				7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */,
+				7E42DC2F1CE99CA7005906BA /* CharacterEncoder.swift */,
+				7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8D3178EAB42689E892B05EFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3592AD720B986DEEF41E6B24 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EC381EC1CD52A85000B3623 /* LightTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EC382181CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalk" */;
+			buildPhases = (
+				93F54E793EAC48A91A798D4C /* Check Pods Manifest.lock */,
+				7EC381E91CD52A85000B3623 /* Sources */,
+				7EC381EA1CD52A85000B3623 /* Frameworks */,
+				7EC381EB1CD52A85000B3623 /* Resources */,
+				223C26C3641D01085CE7EE56 /* Embed Pods Frameworks */,
+				9F3444D0A01D017ADEBE544E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LightTalk;
+			productName = LightTalk;
+			productReference = 7EC381ED1CD52A85000B3623 /* LightTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7EC382031CD52A85000B3623 /* LightTalkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EC3821B1CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalkTests" */;
+			buildPhases = (
+				7EC382001CD52A85000B3623 /* Sources */,
+				7EC382011CD52A85000B3623 /* Frameworks */,
+				7EC382021CD52A85000B3623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EC382061CD52A85000B3623 /* PBXTargetDependency */,
+			);
+			name = LightTalkTests;
+			productName = LightTalkTests;
+			productReference = 7EC382041CD52A85000B3623 /* LightTalkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7EC3820E1CD52A85000B3623 /* LightTalkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EC3821E1CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalkUITests" */;
+			buildPhases = (
+				7EC3820B1CD52A85000B3623 /* Sources */,
+				7EC3820C1CD52A85000B3623 /* Frameworks */,
+				7EC3820D1CD52A85000B3623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EC382111CD52A85000B3623 /* PBXTargetDependency */,
+			);
+			name = LightTalkUITests;
+			productName = LightTalkUITests;
+			productReference = 7EC3820F1CD52A85000B3623 /* LightTalkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EC381E51CD52A85000B3623 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jean Frederic Plante";
+				TargetAttributes = {
+					7EC381EC1CD52A85000B3623 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ZQEHFBD5JZ;
+					};
+					7EC382031CD52A85000B3623 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7EC381EC1CD52A85000B3623;
+					};
+					7EC3820E1CD52A85000B3623 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7EC381EC1CD52A85000B3623;
+					};
+				};
+			};
+			buildConfigurationList = 7EC381E81CD52A85000B3623 /* Build configuration list for PBXProject "LightTalk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7EC381E41CD52A85000B3623;
+			productRefGroup = 7EC381EE1CD52A85000B3623 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EC381EC1CD52A85000B3623 /* LightTalk */,
+				7EC382031CD52A85000B3623 /* LightTalkTests */,
+				7EC3820E1CD52A85000B3623 /* LightTalkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EC381EB1CD52A85000B3623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC381FE1CD52A85000B3623 /* LaunchScreen.storyboard in Resources */,
+				7EC381FB1CD52A85000B3623 /* Assets.xcassets in Resources */,
+				7EC381F61CD52A85000B3623 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC382021CD52A85000B3623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC3820D1CD52A85000B3623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		223C26C3641D01085CE7EE56 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93F54E793EAC48A91A798D4C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9F3444D0A01D017ADEBE544E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EC381E91CD52A85000B3623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC381F31CD52A85000B3623 /* ViewController.swift in Sources */,
+				7EC381F91CD52A85000B3623 /* LightTalk.xcdatamodeld in Sources */,
+				7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */,
+				7E42DC301CE99CA7005906BA /* CharacterEncoder.swift in Sources */,
+				7EC382241CD696A2000B3623 /* CameraAndFlashController.swift in Sources */,
+				7EC382261CD6AAFE000B3623 /* DebugHelper.swift in Sources */,
+				7EB904A21CE78BD200E8E47C /* ManualFlashViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC382001CD52A85000B3623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC382091CD52A85000B3623 /* LightTalkTests.swift in Sources */,
+				95EE62931CEA545A00A9AF99 /* StringEncodingTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC3820B1CD52A85000B3623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC382141CD52A85000B3623 /* LightTalkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7EC382061CD52A85000B3623 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EC381EC1CD52A85000B3623 /* LightTalk */;
+			targetProxy = 7EC382051CD52A85000B3623 /* PBXContainerItemProxy */;
+		};
+		7EC382111CD52A85000B3623 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EC381EC1CD52A85000B3623 /* LightTalk */;
+			targetProxy = 7EC382101CD52A85000B3623 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7EC381F41CD52A85000B3623 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EC381F51CD52A85000B3623 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7EC381FC1CD52A85000B3623 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EC381FD1CD52A85000B3623 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EC382161CD52A85000B3623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EC382171CD52A85000B3623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EC382191CD52A85000B3623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1F8A56A0BDC222CD7F257C0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = LightTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		7EC3821A1CD52A85000B3623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68D4FE7A675C94624AD47A2F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = LightTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		7EC3821C1CD52A85000B3623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LightTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LightTalk.app/LightTalk";
+			};
+			name = Debug;
+		};
+		7EC3821D1CD52A85000B3623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LightTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LightTalk.app/LightTalk";
+			};
+			name = Release;
+		};
+		7EC3821F1CD52A85000B3623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LightTalkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LightTalk;
+			};
+			name = Debug;
+		};
+		7EC382201CD52A85000B3623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LightTalkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfplante.LightTalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LightTalk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EC381E81CD52A85000B3623 /* Build configuration list for PBXProject "LightTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC382161CD52A85000B3623 /* Debug */,
+				7EC382171CD52A85000B3623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EC382181CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC382191CD52A85000B3623 /* Debug */,
+				7EC3821A1CD52A85000B3623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EC3821B1CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC3821C1CD52A85000B3623 /* Debug */,
+				7EC3821D1CD52A85000B3623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EC3821E1CD52A85000B3623 /* Build configuration list for PBXNativeTarget "LightTalkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC3821F1CD52A85000B3623 /* Debug */,
+				7EC382201CD52A85000B3623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7EC381F71CD52A85000B3623 /* LightTalk.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7EC381F81CD52A85000B3623 /* LightTalk.xcdatamodel */,
+			);
+			currentVersion = 7EC381F81CD52A85000B3623 /* LightTalk.xcdatamodel */;
+			path = LightTalk.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7EC381E51CD52A85000B3623 /* Project object */;
+}
