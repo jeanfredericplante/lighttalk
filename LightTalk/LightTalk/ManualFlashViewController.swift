@@ -10,6 +10,9 @@ import UIKit
 
 class ManualFlashViewController: UIViewController {
 
+    @IBOutlet weak var messageInput: UITextField!
+    @IBAction func messageSendPressed(sender: UIButton) {
+    }
     @IBOutlet weak var flashSwitch: UISwitch!
     @IBOutlet weak var flashLevel: UILabel!
     @IBOutlet weak var flashSliderLevel: UISlider!
