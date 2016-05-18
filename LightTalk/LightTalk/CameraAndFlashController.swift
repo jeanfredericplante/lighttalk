@@ -14,7 +14,10 @@ enum FlashLevel: Float {
 }
 
 
-class CameraAndFlashController {
+let messageQueueSent = "com.fantasticwhalelabs.messageQueueSent"
+
+
+class CameraAndFlashController : NSObject {
     
     var cameraWithTorch: AVCaptureDevice?
     var hasTorch: Bool {
@@ -23,8 +26,12 @@ class CameraAndFlashController {
     private let torchQueue = NSOperationQueue()
 
     
-    init() {
+    override init() {
+        super.init()
         cameraWithTorch = getCameraWithTorch()
+        
+        torchQueue.maxConcurrentOperationCount = 1
+        torchQueue.addObserver(self, forKeyPath: "operationCount", options: .New, context: nil)
     }
     
     func getCameraWithTorch() -> AVCaptureDevice? {
@@ -44,11 +51,19 @@ class CameraAndFlashController {
     }
     
     
+    // Cancel sequence
+//     reference in this repo https://github.com/jorgenrh/morse/blob/ceed97b10e79bb1ca83f19535eff9a5f69263171/Morse/TorchGenerator.swift
+    func stop() {
+        torchQueue.cancelAllOperations()
+    }
+    
+    
+    
     func addTorchLevelToQueue(level: Double) {
         
         torchQueue.addOperationWithBlock({
             self.setTorchLevel(level)
-            printDebug("change torch level", withTime: true)
+            printDebug("change torch level \(level)", withTime: true)
         })
         
     }
@@ -74,5 +89,14 @@ class CameraAndFlashController {
         }
     }
 
-
+    // Observe when queue is finished
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        let obj = (object as? NSOperationQueue)
+        if (obj == self.torchQueue && keyPath! == "operationCount") {
+            if obj?.operationCount == 0 {
+                print("*** Torch queue finished")
+                NSNotificationCenter.defaultCenter().postNotificationName(messageQueueSent, object: self)
+            }
+        }
+    }
 }

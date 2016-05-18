@@ -69,8 +69,7 @@ class ManualFlashViewController: UIViewController {
             if let levels = encoder.getBits() {
                 for l in levels {
                     printDebug("sending flash level \(l)", withTime: true)
-                    flashManager.setTorchLevel(Double(l))
-
+                    flashManager.addTorchLevelToQueue(Double(l))
                 }
             }
         }
