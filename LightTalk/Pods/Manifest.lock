@@ -1,0 +1,10 @@
+PODS:
+  - Bitter (1.0.2)
+
+DEPENDENCIES:
+  - Bitter
+
+SPEC CHECKSUMS:
+  Bitter: ded12225ba1d4127859c053dea8d7311c36b6980
+
+COCOAPODS: 0.39.0
