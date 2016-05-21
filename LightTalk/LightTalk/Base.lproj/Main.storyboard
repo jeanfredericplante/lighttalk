@@ -19,14 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-rD-rQF" userLabel="ManualControls">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="250"/>
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BrN-Bt-eMe">
-                                        <rect key="frame" x="8" y="8" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="flashSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5Zb-ZP-nP8"/>
-                                        </connections>
-                                    </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZX-JX-HPI">
                                         <rect key="frame" x="267" y="95" width="67" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
@@ -39,6 +33,12 @@
                                             <action selector="flashLevelChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="r2j-yu-bXU"/>
                                         </connections>
                                     </slider>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BrN-Bt-eMe">
+                                        <rect key="frame" x="8" y="8" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="flashSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5Zb-ZP-nP8"/>
+                                        </connections>
+                                    </switch>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -53,7 +53,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJY-D9-pox" userLabel="Message">
-                                <rect key="frame" x="0.0" y="258" width="600" height="250"/>
+                                <rect key="frame" x="0.0" y="286" width="600" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMq-4c-Ycl">
                                         <rect key="frame" x="552" y="8" width="40" height="30"/>
@@ -87,7 +87,7 @@
                             <constraint firstItem="dJY-D9-pox" firstAttribute="centerX" secondItem="CpC-rD-rQF" secondAttribute="centerX" id="NWN-9B-eeO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CpC-rD-rQF" secondAttribute="trailing" constant="-20" id="VCW-h5-oNQ"/>
                             <constraint firstItem="dJY-D9-pox" firstAttribute="width" secondItem="CpC-rD-rQF" secondAttribute="width" id="gHi-to-x6G"/>
-                            <constraint firstItem="CpC-rD-rQF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="r6T-ZY-Oeh"/>
+                            <constraint firstItem="CpC-rD-rQF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="r6T-ZY-Oeh"/>
                             <constraint firstItem="CpC-rD-rQF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="rwx-3y-azh"/>
                             <constraint firstItem="dJY-D9-pox" firstAttribute="height" secondItem="CpC-rD-rQF" secondAttribute="height" id="yFp-uA-Qvv"/>
                         </constraints>

@@ -19,6 +19,10 @@ let messageQueueSent = "com.fantasticwhalelabs.messageQueueSent"
 
 class CameraAndFlashController : NSObject {
     
+    struct Constants {
+        static let pulseDuration: UInt32 = 40 // ms
+    }
+    
     var cameraWithTorch: AVCaptureDevice?
     var hasTorch: Bool {
         return cameraWithTorch != nil
@@ -63,6 +67,7 @@ class CameraAndFlashController : NSObject {
         
         torchQueue.addOperationWithBlock({
             self.setTorchLevel(level)
+            usleep(Constants.pulseDuration * 1000)
             printDebug("change torch level \(level)", withTime: true)
         })
         
