@@ -1,3 +1,3 @@
-# lighttalk
+# Light Talk
 
-Sending messages with light
+Small talk with light
