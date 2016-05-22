@@ -9,6 +9,11 @@
 import Foundation
 
 class CharacterEncoder {
+    
+    struct Constants {
+        static let messageStart: [UInt8] = [1,0,1,0]
+    }
+    
     private var message : String?
     private var firstBitMask: UInt8 =  0b00000001
     private var encodingLevels: UInt8 = 1 {
@@ -21,12 +26,18 @@ class CharacterEncoder {
         }
     }
     
+    let messageStart = Constants.messageStart
     func setMessage(c: String) {
         message = c
     }
     
     func setEncodingLevels(levels: UInt8) {
         encodingLevels = max(min(levels,2),1)
+    }
+    
+
+    func endMessageWithValidation(message: [UInt8]) -> [UInt8] {
+            return [1] // should return a better parity
     }
     
     
