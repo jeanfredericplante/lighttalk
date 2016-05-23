@@ -19,16 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-rD-rQF" userLabel="ManualControls">
-                                <rect key="frame" x="0.0" y="28" width="600" height="250"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZX-JX-HPI">
-                                        <rect key="frame" x="267" y="95" width="67" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZX-JX-HPI">
+                                        <rect key="frame" x="267" y="46" width="67" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UUO-eb-vC0">
-                                        <rect key="frame" x="6" y="212" width="588" height="31"/>
+                                        <rect key="frame" x="6" y="112" width="588" height="31"/>
                                         <connections>
                                             <action selector="flashLevelChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="r2j-yu-bXU"/>
                                         </connections>
@@ -47,13 +47,13 @@
                                     <constraint firstItem="UUO-eb-vC0" firstAttribute="leading" secondItem="BrN-Bt-eMe" secondAttribute="leading" id="Lhq-GU-ax5"/>
                                     <constraint firstItem="UUO-eb-vC0" firstAttribute="centerX" secondItem="hZX-JX-HPI" secondAttribute="centerX" id="TKM-wi-jzU"/>
                                     <constraint firstItem="UUO-eb-vC0" firstAttribute="bottom" secondItem="CpC-rD-rQF" secondAttribute="bottomMargin" id="ZIa-sr-p11"/>
-                                    <constraint firstAttribute="height" constant="250" id="czc-Tl-HdH"/>
+                                    <constraint firstAttribute="height" constant="150" id="czc-Tl-HdH"/>
                                     <constraint firstItem="BrN-Bt-eMe" firstAttribute="leading" secondItem="CpC-rD-rQF" secondAttribute="leadingMargin" id="vcD-OL-FvD"/>
                                     <constraint firstItem="hZX-JX-HPI" firstAttribute="centerY" secondItem="CpC-rD-rQF" secondAttribute="centerY" id="w0y-hy-y2k"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJY-D9-pox" userLabel="Message">
-                                <rect key="frame" x="0.0" y="286" width="600" height="250"/>
+                                <rect key="frame" x="0.0" y="186" width="600" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMq-4c-Ycl">
                                         <rect key="frame" x="552" y="8" width="40" height="30"/>

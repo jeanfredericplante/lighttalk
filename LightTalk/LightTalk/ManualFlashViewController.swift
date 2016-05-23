@@ -65,17 +65,14 @@ class ManualFlashViewController: UIViewController {
         if let message = messageInput.text {
             print("sending message \(message)")
             let encoder = CharacterEncoder()
-            let startMessage = encoder.messageStart
             encoder.setMessage(message)
-            if let levels = encoder.getBits() {
-                for l in startMessage {
-                    printDebug("sending startMessage \(l)", withTime: true)
+            if let levels = encoder.getFramedMessage() {
+                for (i,l) in levels.enumerate() {
+                    printDebug("sending message level \(l) for bit \(i)", withTime: true)
                     flashManager.addTorchLevelToQueue(Double(l))
                 }
-                for l in levels {
-                    printDebug("sending message level \(l)", withTime: true)
-                    flashManager.addTorchLevelToQueue(Double(l))
-                }
+                // turns off at end of message
+                flashManager.addTorchLevelToQueue(0)
                 
             }
         }
