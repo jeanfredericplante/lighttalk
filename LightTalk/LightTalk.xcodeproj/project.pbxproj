@@ -19,6 +19,7 @@
 		7EC382141CD52A85000B3623 /* LightTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382131CD52A85000B3623 /* LightTalkUITests.swift */; };
 		7EC382241CD696A2000B3623 /* CameraAndFlashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */; };
 		7EC382261CD6AAFE000B3623 /* DebugHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC382251CD6AAFE000B3623 /* DebugHelper.swift */; };
+		7ECD12141CF57AB9004AF8ED /* ReceiveMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD12131CF57AB9004AF8ED /* ReceiveMessageController.swift */; };
 		95EE62931CEA545A00A9AF99 /* StringEncodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE62921CEA545A00A9AF99 /* StringEncodingTest.swift */; };
 		A4EB0C0969F5FCF215802FD0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3592AD720B986DEEF41E6B24 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		7EC382151CD52A85000B3623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraAndFlashController.swift; sourceTree = "<group>"; };
 		7EC382251CD6AAFE000B3623 /* DebugHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugHelper.swift; sourceTree = "<group>"; };
+		7ECD12131CF57AB9004AF8ED /* ReceiveMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveMessageController.swift; sourceTree = "<group>"; };
 		95EE62921CEA545A00A9AF99 /* StringEncodingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEncodingTest.swift; sourceTree = "<group>"; };
 		B1F8A56A0BDC222CD7F257C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 			children = (
 				7EC381F21CD52A85000B3623 /* ViewController.swift */,
 				7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */,
+				7ECD12131CF57AB9004AF8ED /* ReceiveMessageController.swift */,
 				7E42DC2F1CE99CA7005906BA /* CharacterEncoder.swift */,
 				7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */,
 			);
@@ -371,6 +374,7 @@
 				7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */,
 				7E42DC301CE99CA7005906BA /* CharacterEncoder.swift in Sources */,
 				7EC382241CD696A2000B3623 /* CameraAndFlashController.swift in Sources */,
+				7ECD12141CF57AB9004AF8ED /* ReceiveMessageController.swift in Sources */,
 				7EC382261CD6AAFE000B3623 /* DebugHelper.swift in Sources */,
 				7EB904A21CE78BD200E8E47C /* ManualFlashViewController.swift in Sources */,
 			);

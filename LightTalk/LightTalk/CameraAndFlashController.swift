@@ -20,9 +20,17 @@ let messageQueueSent = "com.fantasticwhalelabs.messageQueueSent"
 class CameraAndFlashController : NSObject {
     
     struct Constants {
-        static let pulseDuration: UInt32 = 40 // ms
+        static let pulseDurationInMilliseconds: UInt32 = 40 // ms
+        static let quality =  AVCaptureSessionPresetMedium
+        static let orientation: AVCaptureDevicePosition = .Back
     }
     
+    // Camera variables
+    var session =  AVCaptureSession()
+    let sessionQueue = dispatch_queue_create("CameraRecorderQueue", DISPATCH_QUEUE_SERIAL)
+    var videoDevice: AVCaptureDevice?
+
+    // Torch variables
     var cameraWithTorch: AVCaptureDevice?
     var hasTorch: Bool {
         return cameraWithTorch != nil
@@ -67,7 +75,7 @@ class CameraAndFlashController : NSObject {
         
         torchQueue.addOperationWithBlock({
             self.setTorchLevel(level)
-            usleep(Constants.pulseDuration * 1000)
+            usleep(Constants.pulseDurationInMilliseconds * 1000)
             printDebug("change torch level \(level)", withTime: true)
         })
         
@@ -104,4 +112,55 @@ class CameraAndFlashController : NSObject {
             }
         }
     }
+    
+    
+    // Receiving the message
+    func startCamera() {
+        if self.session.running == false {
+            NSLog("starting camera")
+            dispatch_async(sessionQueue) {
+                self.setupVideoSession()
+                NSLog("about to start the camera preview")
+                self.session.startRunning()
+                NSLog("camera preview started")
+            }
+        } else {
+            print("starting camera aborted: session already running")
+        }
+    }
+    
+    func stopCamera() {
+        if self.session.running == true {
+            print("stopping camera")
+            dispatch_async(sessionQueue) {
+                self.session.stopRunning()
+                for output in self.session.outputs {
+                    if let avFileOutput = output as? AVCaptureFileOutput {
+                        self.session.removeOutput(avFileOutput)
+                    }
+                }
+                
+            }
+        } else {
+            print("stopping camera aborted: session not running")
+        }
+    }
+    
+    func setupVideoSession() {
+        NSLog("starting video session setup")
+        // Video session configuration
+        self.session = AVCaptureSession()
+        
+        self.session.beginConfiguration()
+        // Max duration
+        // Video is always capturing 1 extra frame, substract
+        // Add the recording delay to be able to trim it after
+        let frameDuration = CMTimeMake(1, 24) // time of 1 frame at 24fps
+        
+        self.session.commitConfiguration()
+        NSLog("finishing video session setup")
+        
+    }
+    
+    
 }
