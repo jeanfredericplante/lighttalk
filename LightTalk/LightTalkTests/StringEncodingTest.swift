@@ -45,8 +45,13 @@ class StringEncodingTest: XCTestCase {
         encoder.setMessage(" ")
         XCTAssertEqual(encoder.getBits()!, [0,0,1,0,0,0,0,0] )
         XCTAssertEqual(encoder.getValidationBits(encoder.getBits()!), [1] )
-
-
+    }
+    
+    func testFramedMessage() {
+        encoder.setMessage("U")
+        XCTAssertEqual(encoder.getFramedMessage()!, [1,0,1,0,0,1,0,1,0,1,0,1,0,1,0] )
+        encoder.setMessage(" ")
+        XCTAssertEqual(encoder.getFramedMessage()!, [1,0,1,0,0,1,0,0,1,0,0,0,0,0,1] )
     }
 
   
