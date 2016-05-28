@@ -8,6 +8,7 @@
 
 import Foundation
 import AVFoundation
+import UIKit
 
 enum FlashLevel: Float {
     case Zero = 0.0, One = 0.25, Two = 0.5, Three = 0.75, Four = 1.0
@@ -16,8 +17,13 @@ enum FlashLevel: Float {
 
 let messageQueueSent = "com.fantasticwhalelabs.messageQueueSent"
 
+protocol CameraAndFlashControllerDelegate {
+    func didGetCameraFrame(frame: UIImage)
 
-class CameraAndFlashController : NSObject {
+}
+
+
+class CameraAndFlashController : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     struct Constants {
         static let pulseDurationInMilliseconds: UInt32 = 40 // ms
@@ -28,7 +34,9 @@ class CameraAndFlashController : NSObject {
     // Camera variables
     var session =  AVCaptureSession()
     let sessionQueue = dispatch_queue_create("CameraRecorderQueue", DISPATCH_QUEUE_SERIAL)
+    let dataFrameQueue = dispatch_queue_create("DataFrameQueue", DISPATCH_QUEUE_SERIAL)
     var videoDevice: AVCaptureDevice?
+    var delegate : CameraAndFlashControllerDelegate?
 
     // Torch variables
     var cameraWithTorch: AVCaptureDevice?
@@ -149,18 +157,94 @@ class CameraAndFlashController : NSObject {
     func setupVideoSession() {
         NSLog("starting video session setup")
         // Video session configuration
-        self.session = AVCaptureSession()
         
         self.session.beginConfiguration()
+        let videoDataOutput = AVCaptureVideoDataOutput()
+          if self.session.canAddOutput(videoDataOutput) {
+            self.session.addOutput(videoDataOutput)
+        } else {
+            print("error: couldn't add the video data output to the session")
+        }
         // Max duration
         // Video is always capturing 1 extra frame, substract
         // Add the recording delay to be able to trim it after
         let frameDuration = CMTimeMake(1, 24) // time of 1 frame at 24fps
-        
+        videoDataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey: Int(kCVPixelFormatType_32BGRA)]
+        videoDataOutput.alwaysDiscardsLateVideoFrames = false
+        videoDataOutput.setSampleBufferDelegate(self, queue: self.dataFrameQueue)
+      
         self.session.commitConfiguration()
         NSLog("finishing video session setup")
         
     }
     
+    func configure(cameraOrientation: AVCaptureDevicePosition = Constants.orientation, completion: (successfulInit: Bool) -> Void) {
+        NSLog("configuring video recorder")
+        // Adds camera to the session
+        
+        /** Configure complete action typically starts the session
+        
+        configureCompleteAction = { (success: Bool) -> Void in
+            
+            if success {
+                self.videoPreview.configure(self.videoRecorder.session)
+                
+                self.videoRecorder.startCamera()
+            } else {
+                printDebug("can't start video")
+                self.placeholderImage.image = UIImage(named: "Piggie")
+            }
+        } **/
+        
+        self.session = AVCaptureSession()
+        dispatch_async(sessionQueue) {
+            self.checkDeviceAuthorizationStatus()
+            self.session.sessionPreset = Constants.quality
+            if self.videoDevice != nil {
+                var err : NSError? = nil
+                let input: AVCaptureDeviceInput!
+                do {
+                    input = try AVCaptureDeviceInput(device: self.cameraWithTorch)
+                } catch let error as NSError {
+                    err = error
+                    input = nil
+                } catch {
+                    fatalError()
+                }
+                if err != nil  {
+                    print("error adding input device to recorder")
+                } else {
+                    self.session.addInput(input)
+                    dispatch_async(dispatch_get_main_queue(), {completion(successfulInit: true)})
+                }
+            } else {
+                printDebug("video device not present")
+                dispatch_async(dispatch_get_main_queue(),  {completion(successfulInit: false)})
+            }
+        }
+    }
+
+    private func checkDeviceAuthorizationStatus() {
+        AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo, completionHandler: { (granted) -> Void in
+            if !granted {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    let alert = UIAlertView(title: "Alert",
+                        message: "CustomCamera doesn't have permission to use Camera, please change privacy settings",
+                        delegate: self,
+                        cancelButtonTitle: "Ok")
+                    alert.show()
+                });
+            }
+        });
+    }
     
+    
+    // MARK: - Delegate methods
+    func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
+        let capturedImage : UIImage = imageFromSampleBuffer(sampleBuffer)
+        delegate?.didGetCameraFrame(capturedImage)
+    }
+    
+    
+    // MARK: - Utilities
 }
