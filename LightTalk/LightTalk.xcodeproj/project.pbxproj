@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7E42DC301CE99CA7005906BA /* CharacterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E42DC2F1CE99CA7005906BA /* CharacterEncoder.swift */; };
+		7E6E39CC1CFBE8BC00B577A3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E39CB1CFBE8BC00B577A3 /* UIImage+Extension.swift */; };
+		7E8E04DA1CFA709C00275BE7 /* ImageProcessingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E04D91CFA709C00275BE7 /* ImageProcessingTests.swift */; };
 		7EB904A21CE78BD200E8E47C /* ManualFlashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */; };
 		7EC381F11CD52A85000B3623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F01CD52A85000B3623 /* AppDelegate.swift */; };
 		7EC381F31CD52A85000B3623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC381F21CD52A85000B3623 /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		3592AD720B986DEEF41E6B24 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D4FE7A675C94624AD47A2F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7E42DC2F1CE99CA7005906BA /* CharacterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterEncoder.swift; sourceTree = "<group>"; };
+		7E6E39CB1CFBE8BC00B577A3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		7E8E04D91CFA709C00275BE7 /* ImageProcessingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessingTests.swift; sourceTree = "<group>"; };
 		7EB904A11CE78BD200E8E47C /* ManualFlashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualFlashViewController.swift; sourceTree = "<group>"; };
 		7EC381ED1CD52A85000B3623 /* LightTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC381F01CD52A85000B3623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 			children = (
 				7EC382081CD52A85000B3623 /* LightTalkTests.swift */,
 				95EE62921CEA545A00A9AF99 /* StringEncodingTest.swift */,
+				7E8E04D91CFA709C00275BE7 /* ImageProcessingTests.swift */,
 				7EC3820A1CD52A85000B3623 /* Info.plist */,
 			);
 			path = LightTalkTests;
@@ -177,6 +182,7 @@
 				7ECD12131CF57AB9004AF8ED /* ReceiveMessageController.swift */,
 				7E42DC2F1CE99CA7005906BA /* CharacterEncoder.swift */,
 				7EC382231CD696A2000B3623 /* CameraAndFlashController.swift */,
+				7E6E39CB1CFBE8BC00B577A3 /* UIImage+Extension.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				7EC382241CD696A2000B3623 /* CameraAndFlashController.swift in Sources */,
 				7ECD12141CF57AB9004AF8ED /* ReceiveMessageController.swift in Sources */,
 				7EC382261CD6AAFE000B3623 /* DebugHelper.swift in Sources */,
+				7E6E39CC1CFBE8BC00B577A3 /* UIImage+Extension.swift in Sources */,
 				95D4BA9A1CFA0A07007D9EE2 /* FrameProcessingHelper.swift in Sources */,
 				7EB904A21CE78BD200E8E47C /* ManualFlashViewController.swift in Sources */,
 			);
@@ -389,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EC382091CD52A85000B3623 /* LightTalkTests.swift in Sources */,
+				7E8E04DA1CFA709C00275BE7 /* ImageProcessingTests.swift in Sources */,
 				95EE62931CEA545A00A9AF99 /* StringEncodingTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

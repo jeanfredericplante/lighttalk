@@ -13,20 +13,34 @@ import CoreImage
 
 
 
-func averageBrightness(image: UIImage)-> UIImage
+func averageBrightness(image: UIImage) -> UInt8?
 {
+    let imageWidth = Int(image.size.width)
+    let imageHeight = Int(image.size.height)
+    var hasAlpha: Bool?
     
     let context = CIContext(options: nil)
-    let convertImage = CIImage(image: image)
+
+    guard let im_ci = image.getCIImage(), averageFilter = CIFilter(name: "CIAreaAverage") else {
+        return nil
+    }
     
-    let averageFilter = CIFilter(name: "CIAreaAverage")
-    averageFilter!.setValue(convertImage , forKey: kCIInputImageKey)
-    let processedImage = averageFilter!.outputImage
-    let averagedImage = context.createCGImage(processedImage!, fromRect: processedImage!.extent)
+    averageFilter.setValue(im_ci , forKey: kCIInputImageKey)
+    averageFilter.setValue(CIVector(CGRect: im_ci.extent), forKey: kCIInputExtentKey)
+
+    guard let processedImage = averageFilter.outputImage else {
+        return nil
+    }
+    let averagedImage = context.createCGImage(processedImage, fromRect: processedImage.extent)
+    let pixelData = CGDataProviderCopyData(CGImageGetDataProvider(averagedImage))
+    let pixelDataPtr = CFDataGetBytePtr(pixelData)
     
-    let newImage =  UIImage(CGImage: averagedImage)
-    
-    return newImage
+    let red = Int(pixelDataPtr[0])
+    let green = Int(pixelDataPtr[0+1])
+    let blue = Int(pixelDataPtr[0+2])
+    let gray = (red + blue + green) / 3
+
+    return UInt8(gray)
 }
 
 func imageFromSampleBuffer(sampleBuffer: CMSampleBufferRef) ->  UIImage {
