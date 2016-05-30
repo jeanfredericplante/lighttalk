@@ -35,7 +35,6 @@ class CameraAndFlashController : NSObject, AVCaptureVideoDataOutputSampleBufferD
     var session =  AVCaptureSession()
     let sessionQueue = dispatch_queue_create("CameraRecorderQueue", DISPATCH_QUEUE_SERIAL)
     let dataFrameQueue = dispatch_queue_create("DataFrameQueue", DISPATCH_QUEUE_SERIAL)
-    var videoDevice: AVCaptureDevice?
     var delegate : CameraAndFlashControllerDelegate?
 
     // Torch variables
@@ -178,7 +177,7 @@ class CameraAndFlashController : NSObject, AVCaptureVideoDataOutputSampleBufferD
         
     }
     
-    func configure(cameraOrientation: AVCaptureDevicePosition = Constants.orientation, completion: (successfulInit: Bool) -> Void) {
+    func configure(completion: (successfulInit: Bool) -> Void) {
         NSLog("configuring video recorder")
         // Adds camera to the session
         
@@ -187,12 +186,10 @@ class CameraAndFlashController : NSObject, AVCaptureVideoDataOutputSampleBufferD
         configureCompleteAction = { (success: Bool) -> Void in
             
             if success {
-                self.videoPreview.configure(self.videoRecorder.session)
-                
-                self.videoRecorder.startCamera()
+               self.videoRecorder.startCamera()
+                // start camera sets up the video session
             } else {
                 printDebug("can't start video")
-                self.placeholderImage.image = UIImage(named: "Piggie")
             }
         } **/
         
@@ -200,22 +197,14 @@ class CameraAndFlashController : NSObject, AVCaptureVideoDataOutputSampleBufferD
         dispatch_async(sessionQueue) {
             self.checkDeviceAuthorizationStatus()
             self.session.sessionPreset = Constants.quality
-            if self.videoDevice != nil {
-                var err : NSError? = nil
+            if self.cameraWithTorch != nil {
                 let input: AVCaptureDeviceInput!
                 do {
                     input = try AVCaptureDeviceInput(device: self.cameraWithTorch)
-                } catch let error as NSError {
-                    err = error
-                    input = nil
-                } catch {
-                    fatalError()
-                }
-                if err != nil  {
-                    print("error adding input device to recorder")
-                } else {
                     self.session.addInput(input)
                     dispatch_async(dispatch_get_main_queue(), {completion(successfulInit: true)})
+                } catch let error as NSError {
+                    print("error adding input device to recorder \(error)")
                 }
             } else {
                 printDebug("video device not present")

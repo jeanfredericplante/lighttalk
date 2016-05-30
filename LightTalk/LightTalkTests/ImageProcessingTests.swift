@@ -24,8 +24,8 @@ class ImageProcessingTests: XCTestCase {
     func testLightnessCalculation() {
         let flash = UIImage(named: "flash")!
         let noflash = UIImage(named: "no_flash")!
-        let flashBrightness = averageBrightness(flash)
-        let noFlashBrightness = averageBrightness(noflash)
+        let flashBrightness = flash.averageBrightness
+        let noFlashBrightness = noflash.averageBrightness
         XCTAssertNotNil(flashBrightness)
         XCTAssertNotNil(noFlashBrightness)
         XCTAssertLessThan(noFlashBrightness!, flashBrightness!)

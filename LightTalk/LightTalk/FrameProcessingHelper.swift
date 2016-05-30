@@ -15,10 +15,6 @@ import CoreImage
 
 func averageBrightness(image: UIImage) -> UInt8?
 {
-    let imageWidth = Int(image.size.width)
-    let imageHeight = Int(image.size.height)
-    var hasAlpha: Bool?
-    
     let context = CIContext(options: nil)
 
     guard let im_ci = image.getCIImage(), averageFilter = CIFilter(name: "CIAreaAverage") else {
@@ -31,6 +27,7 @@ func averageBrightness(image: UIImage) -> UInt8?
     guard let processedImage = averageFilter.outputImage else {
         return nil
     }
+    
     let averagedImage = context.createCGImage(processedImage, fromRect: processedImage.extent)
     let pixelData = CGDataProviderCopyData(CGImageGetDataProvider(averagedImage))
     let pixelDataPtr = CFDataGetBytePtr(pixelData)
@@ -38,7 +35,7 @@ func averageBrightness(image: UIImage) -> UInt8?
     let red = Int(pixelDataPtr[0])
     let green = Int(pixelDataPtr[0+1])
     let blue = Int(pixelDataPtr[0+2])
-    let gray = (red + blue + green) / 3
+    let gray = (red + blue + green) / 3 // alternative luminosity calculation 0.21 R + 0.72 G + 0.07 B
 
     return UInt8(gray)
 }
@@ -46,18 +43,18 @@ func averageBrightness(image: UIImage) -> UInt8?
 func imageFromSampleBuffer(sampleBuffer: CMSampleBufferRef) ->  UIImage {
     let imageBuffer: CVImageBufferRef = CMSampleBufferGetImageBuffer(sampleBuffer)!
     
-    // ベースアドレスをロック
+    // Lock the base address ベースアドレスをロック
     CVPixelBufferLockBaseAddress(imageBuffer, 0)
     
-    // 画像データの情報を取得
+    // Get the information of the image data 画像データの情報を取得
     let baseAddress = CVPixelBufferGetBaseAddressOfPlane(imageBuffer, 0)
     
     let bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer)
     let width = CVPixelBufferGetWidth(imageBuffer)
     let height = CVPixelBufferGetHeight(imageBuffer)
     
-    // RGB色空間を作成
-    let colorSpace: CGColorSpaceRef = CGColorSpaceCreateDeviceGray()!
+    // Create a color space  RGB 色空間を作成
+    let colorSpace: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()!
     
     // Bitmap graphic contextを作成
     let bitmapInfo: UInt32 = CGBitmapInfo(rawValue: (CGBitmapInfo.ByteOrder32Little.rawValue | CGImageAlphaInfo.PremultipliedFirst.rawValue)).rawValue as UInt32
@@ -66,7 +63,7 @@ func imageFromSampleBuffer(sampleBuffer: CMSampleBufferRef) ->  UIImage {
     // Quartz imageを作成
     let imageRef = CGBitmapContextCreateImage(Context)
     
-    // ベースアドレスをアンロック
+    // Unlock the base addressベースアドレスをアンロック
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0)
     
     // UIImageを作成

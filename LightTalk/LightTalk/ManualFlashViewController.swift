@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ManualFlashViewController: UIViewController {
+class ManualFlashViewController: UIViewController, CameraAndFlashControllerDelegate {
 
     @IBOutlet weak var messageInput: UITextField!
     @IBAction func messageSendPressed(sender: UIButton) {
@@ -24,8 +24,15 @@ class ManualFlashViewController: UIViewController {
     @IBAction func flashLevelChanged(sender: UISlider) {
         updateFlashState()
     }
-    let flashManager = CameraAndFlashController()
+    @IBAction func readMessagePressed(sender: UIButton) {
+        startCamera()
+    }
     
+    @IBOutlet weak var messageRead: UILabel!
+    
+    let flashManager = CameraAndFlashController()
+    let scanIndex: [Int] = []
+    let scanBrightness: [Int] = []
     
     
     
@@ -36,6 +43,7 @@ class ManualFlashViewController: UIViewController {
             flashSwitch.setOn(false, animated: false)
         }
         updateFlashState()
+        flashManager.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -78,6 +86,25 @@ class ManualFlashViewController: UIViewController {
         }
     }
     
+    // MARK: - Camera
+    func startCamera() {
+        let configureCompleteAction = { (success: Bool) -> Void in
+            if success {
+                self.flashManager.startCamera()  // starts camera and sets up the video session
+            } else {
+                printDebug("can't start video")
+            }
+        }
+        flashManager.configure(configureCompleteAction)
+    }
+    
+    
+    func didGetCameraFrame(frame: UIImage) {
+        if let brightness = frame.averageBrightness {
+            dispatch_async(dispatch_get_main_queue(), {self.messageRead.text = "\(brightness)"})
+       }
+    }
+
 
     /*
     // MARK: - Navigation
