@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum Slope {
+    case Up, Down, Equal
+}
+
 class ManualFlashViewController: UIViewController, CameraAndFlashControllerDelegate {
 
     @IBOutlet weak var messageInput: UITextField!
@@ -31,8 +35,9 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
     @IBOutlet weak var messageRead: UILabel!
     
     let flashManager = CameraAndFlashController()
-    let scanIndex: [Int] = []
-    let scanBrightness: [Int] = []
+    var scanIndex: [Int] = []
+    var scanBrightness: [Int] = []
+    var scanDelta:[Int] = []
     
     
     
@@ -101,8 +106,32 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
     
     func didGetCameraFrame(frame: UIImage) {
         if let brightness = frame.averageBrightness {
-            dispatch_async(dispatch_get_main_queue(), {self.messageRead.text = "\(brightness)"})
+            let slope = addScanDataPoint(Int(brightness))
+            dispatch_async(dispatch_get_main_queue(), {self.messageRead.text = "\(brightness) + \(slope)"})
        }
+    }
+    
+    func addScanDataPoint(brightness: Int) -> Slope {
+        var delta : Slope = .Equal
+        if let lastIndex = scanIndex.last, lastScanBrightness = scanBrightness.last {
+            scanIndex.append(lastIndex + 1)
+            scanDelta.append(brightness - lastScanBrightness)
+        } else {
+            scanIndex.append(0)
+            scanDelta.append(0)
+        }
+        scanBrightness.append(brightness)
+        if let lastDelta = scanDelta.last {
+            switch lastDelta {
+            case 40...255:
+                delta = .Up
+            case -255 ... -40:
+                delta = .Down
+            default:
+                delta = .Equal
+            }
+        }
+        return delta
     }
 
 
