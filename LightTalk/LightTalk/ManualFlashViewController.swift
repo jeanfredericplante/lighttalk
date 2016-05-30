@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import CoreMedia
 
 enum Slope {
-    case Up, Down, Equal
+    case Up , Down, Equal
 }
 
 class ManualFlashViewController: UIViewController, CameraAndFlashControllerDelegate {
@@ -38,6 +39,7 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
     var scanIndex: [Int] = []
     var scanBrightness: [Int] = []
     var scanDelta:[Int] = []
+    let messageBuffer: MessageBuffer = MessageBuffer()
     
     
     
@@ -104,7 +106,7 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
     }
     
     
-    func didGetCameraFrame(frame: UIImage) {
+    func didGetCameraFrame(frame: UIImage, time: CMTime) {
         if let brightness = frame.averageBrightness {
             let slope = addScanDataPoint(Int(brightness))
             dispatch_async(dispatch_get_main_queue(), {self.messageRead.text = "\(brightness) + \(slope)"})

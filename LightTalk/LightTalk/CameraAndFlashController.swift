@@ -18,7 +18,7 @@ enum FlashLevel: Float {
 let messageQueueSent = "com.fantasticwhalelabs.messageQueueSent"
 
 protocol CameraAndFlashControllerDelegate {
-    func didGetCameraFrame(frame: UIImage)
+    func didGetCameraFrame(frame: UIImage, time: CMTime)
 
 }
 
@@ -231,7 +231,8 @@ class CameraAndFlashController : NSObject, AVCaptureVideoDataOutputSampleBufferD
     // MARK: - Delegate methods
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
         let capturedImage : UIImage = imageFromSampleBuffer(sampleBuffer)
-        delegate?.didGetCameraFrame(capturedImage)
+        let frameTime : CMTime = CMSampleBufferGetDecodeTimeStamp(sampleBuffer)
+        delegate?.didGetCameraFrame(capturedImage, time: frameTime)
     }
     
     
