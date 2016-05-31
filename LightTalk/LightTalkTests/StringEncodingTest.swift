@@ -53,6 +53,11 @@ class StringEncodingTest: XCTestCase {
         encoder.setMessage(" ")
         XCTAssertEqual(encoder.getFramedMessage()!, [1,0,1,0,0,1,0,0,1,0,0,0,0,0,1] )
     }
+    
+    func testMessageBuffer() {
+        let messageBuffer = MessageBuffer()
+        XCTAssertEqual(messageBuffer.state, MessageState.Blank)
+    }
 
   
 }
