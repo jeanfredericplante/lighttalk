@@ -16,12 +16,11 @@ class CharacterEncoder {
     struct Constants {
         static let messageHeader: [UInt8] = [1,0,1,0]
         static let messageLengthInBytes: [UInt8] = [0,1]
+        static let crcLength: Int = 1
+        static var bytesInMessage: Int {return Int(2*Constants.messageLengthInBytes[0] + Constants.messageLengthInBytes[1]) }
     }
     
     private var message : String?
-    private var bytesInMessage: UInt8 {
-        get { return 2*Constants.messageLengthInBytes[0] + Constants.messageLengthInBytes[1] }
-    }
     private var firstBitMask: UInt8 =  0b00000001
     private var encodingLevels: UInt8 = 1 {
         didSet {
@@ -33,7 +32,7 @@ class CharacterEncoder {
         }
     }
     
-    let messageHeader = Constants.messageHeader + Constants.messageLengthInBytes
+    let messageHeader = Constants.messageHeader
     func setMessage(c: String) {
         message = c
     }
@@ -76,7 +75,8 @@ class CharacterEncoder {
     func getFramedMessage() -> [UInt8]? {
         if let message = message {
             var framedMessage: [UInt8] = []
-
+            
+            // should use bytes in message
             for char in [UInt8](message.utf8) {
                 let charBits = getCharBits(char)
                 let validation = getValidationBits(charBits)

@@ -10,7 +10,10 @@ import Foundation
 import CoreMedia
 
 enum MessageState {
-    case Blank, Header(Int), Length(Int), Body(Int), CRC(Int), Complete
+    case Blank, Header(Int), Length(Int), Body(Int), CRC(Int), Complete, Invalid
+}
+enum MessagePart {
+    case Header, Body, CRC
 }
 
 class MessageBuffer {
@@ -18,10 +21,30 @@ class MessageBuffer {
     var time: [CMTime] = []
     var state: MessageState = .Blank
     let header = CharacterEncoder.Constants.messageHeader
+
     let crcLength = CharacterEncoder.Constants.crcLength
-    let bytesInMessage = CharacterEncoder.Constants.messageLengthInBytes
+    let bytesInMessage = CharacterEncoder.Constants.bytesInMessage
     var headerValid : Bool {
         return Array(levels[0...3]) == header
+    }
+    var crcValid : Bool {
+        return true
+    }
+    func getMessagePart(part: MessagePart) -> [UInt8]? {
+        let headerLength = header.count
+        let messageLength = headerLength + (8 * bytesInMessage) + crcLength
+        guard levels.count > messageLength else {
+            return nil
+        }
+        switch part {
+        case .Header:
+            return levels[0..<headerLength]
+            if levels.count > headerLength {
+                
+            }
+        default:
+            break
+        }
     }
     var messageLength: UInt8? {
         guard levels.count >= 6 else {
@@ -45,31 +68,33 @@ class MessageBuffer {
                 state = .Header(bitNum + 1); addMessageBit(level, time: time)
             } else {
                 if headerValid {
-                    state = .Length(1); addMessageBit(level, time: time)
+                    state = .Body(1); addMessageBit(level, time: time)
                 } else {
                     return resetMessage()
                 }
             }
-        case .Length(let bitNum):
-            guard let level = slopeToLevel(slope) else { return resetMessage() }
-            if bitNum < 2 {
-                state = .Length(bitNum + 1); addMessageBit(level, time: time)
-            } else {
-                guard let messageLength = messageLength else {
-                     return resetMessage()
-                }
-                state = .Body(1); addMessageBit(level, time: time)
-            }
         case .Body(let bitNum):
-            guard let level = slopeToLevel(slope), messageLength = messageLength else { return resetMessage() }
-            if bitNum < 8 * Int(messageLength) {
+            guard let level = slopeToLevel(slope) else { return resetMessage() }
+            if bitNum < 8 * bytesInMessage {
                 state = .Body(bitNum + 1); addMessageBit(level, time: time)
             } else {
                 // all bits in, moving to CRC
                 state = .CRC(1); addMessageBit(level, time: time)
             }
         case .CRC(let bitNum):
+            guard let level = slopeToLevel(slope) else { return resetMessage() }
+            if bitNum < Int(crcLength) {
+                state = .CRC(bitNum + 1); addMessageBit(level, time: time)
+            } else {
+                // crc is in
+                if headerValid {
+                    state = .Body(1); addMessageBit(level, time: time)
+                } else {
+                    return resetMessage()
+                }
+            }
 
+            break
         case .Complete:
             break
         default:
