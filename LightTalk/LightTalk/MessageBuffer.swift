@@ -9,15 +9,33 @@
 import Foundation
 import CoreMedia
 
-enum MessageState {
+enum MessageState : Equatable {
     case Blank, Header(Int), Length(Int), Body(Int), CRC(Int), Complete, Invalid
 }
+
+func ==(lhs: MessageState, rhs: MessageState) -> Bool {
+    switch (lhs, rhs) {
+    case (let .Header(bytNum1), let .Header(bytNum2)):
+        return bytNum1 == bytNum2
+    case (let .Length(bytNum1), let .Length(bytNum2)):
+        return bytNum1 == bytNum2
+    case (let .Body(bytNum1), let .Body(bytNum2)):
+        return bytNum1 == bytNum2
+    case (let .CRC(bytNum1), let .CRC(bytNum2)):
+        return bytNum1 == bytNum2
+    case (.Blank, .Blank),(.Complete, .Complete),(.Invalid, .Invalid):
+        return true
+    default:
+        return false
+    }
+}
+
 enum MessagePart {
     case Header, Body, CRC
 }
 
 class MessageBuffer {
-    var levels: [UInt8] = []
+    var levels: [UInt8] = Array()
     var time: [CMTime] = []
     var state: MessageState = .Blank
     let header = CharacterEncoder.Constants.messageHeader
@@ -30,22 +48,24 @@ class MessageBuffer {
     var crcValid : Bool {
         return true
     }
+    
     func getMessagePart(part: MessagePart) -> [UInt8]? {
         let headerLength = header.count
-        let messageLength = headerLength + (8 * bytesInMessage) + crcLength
+        let bodyLength = 8 * bytesInMessage
+        let messageLength = headerLength + bodyLength + crcLength
         guard levels.count > messageLength else {
             return nil
         }
         switch part {
         case .Header:
-            return levels[0..<headerLength]
-            if levels.count > headerLength {
-                
-            }
-        default:
-            break
+            return Array(levels[0..<headerLength])
+        case .Body:
+            return Array(levels[headerLength..<headerLength+bodyLength])
+        case .CRC:
+            return Array(levels[headerLength+bodyLength..<headerLength+bodyLength+crcLength])
         }
     }
+    
     var messageLength: UInt8? {
         guard levels.count >= 6 else {
             return nil

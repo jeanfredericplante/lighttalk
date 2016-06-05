@@ -49,14 +49,27 @@ class StringEncodingTest: XCTestCase {
     
     func testFramedMessage() {
         encoder.setMessage("U")
-        XCTAssertEqual(encoder.getFramedMessage()!, [1,0,1,0,0,1,0,1,0,1,0,1,0,1,0] )
+        XCTAssertEqual(encoder.getFramedMessage()!, [1,0,1,0,0,1,0,1,0,1,0,1,0] )
         encoder.setMessage(" ")
-        XCTAssertEqual(encoder.getFramedMessage()!, [1,0,1,0,0,1,0,0,1,0,0,0,0,0,1] )
+        XCTAssertEqual(encoder.getFramedMessage()!, [1,0,1,0,0,0,1,0,0,0,0,0,1] )
     }
     
     func testMessageBuffer() {
         let messageBuffer = MessageBuffer()
         XCTAssertEqual(messageBuffer.state, MessageState.Blank)
+        encoder.setMessage("U")
+        messageBuffer.levels = encoder.getFramedMessage()!
+        XCTAssertEqual(messageBuffer.levels, [1,0,1,0,0,1,0,1,0,1,0,1,0,1,0] )
+        let header  = messageBuffer.getMessagePart(.Header)
+        XCTAssertNotNil(header)
+        XCTAssertEqual(header!, [1,0,1,0] )
+        let body  = messageBuffer.getMessagePart(.Body)
+        XCTAssertEqual(body!, [0,1,0,1,0,1,0,1] )
+        let crc  = messageBuffer.getMessagePart(.CRC)
+        XCTAssertEqual(crc!, [0] )
+        
+
+        
     }
 
   
