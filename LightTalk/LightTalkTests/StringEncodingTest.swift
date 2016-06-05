@@ -59,17 +59,35 @@ class StringEncodingTest: XCTestCase {
         XCTAssertEqual(messageBuffer.state, MessageState.Blank)
         encoder.setMessage("U")
         messageBuffer.levels = encoder.getFramedMessage()!
-        XCTAssertEqual(messageBuffer.levels, [1,0,1,0,0,1,0,1,0,1,0,1,0,1,0] )
-        let header  = messageBuffer.getMessagePart(.Header)
+        XCTAssertEqual(messageBuffer.levels, [1,0,1,0,0,1,0,1,0,1,0,1,0] )
+        var header  = messageBuffer.getMessagePart(.Header)
         XCTAssertNotNil(header)
         XCTAssertEqual(header!, [1,0,1,0] )
-        let body  = messageBuffer.getMessagePart(.Body)
+        var body  = messageBuffer.getMessagePart(.Body)
         XCTAssertEqual(body!, [0,1,0,1,0,1,0,1] )
-        let crc  = messageBuffer.getMessagePart(.CRC)
+        var crc  = messageBuffer.getMessagePart(.CRC)
         XCTAssertEqual(crc!, [0] )
         
+        encoder.setMessage(" ")
+        messageBuffer.levels = encoder.getFramedMessage()!
 
-        
+        XCTAssertEqual(messageBuffer.levels, [1,0,1,0,0,0,1,0,0,0,0,0,1] )
+        header  = messageBuffer.getMessagePart(.Header)
+        XCTAssertNotNil(header)
+        XCTAssertEqual(header!, [1,0,1,0] )
+        body  = messageBuffer.getMessagePart(.Body)
+        XCTAssertEqual(body!, [0,0,1,0,0,0,0,0] )
+        crc  = messageBuffer.getMessagePart(.CRC)
+        XCTAssertEqual(crc!, [1] )
+    }
+    
+    func testMessageBufferCRC() {
+        let messageBuffer = MessageBuffer()
+        messageBuffer.levels = [1,0,1,0,0,0,1,0,0,0,0,0,0]
+        XCTAssertFalse(messageBuffer.crcValid)
+        messageBuffer.levels = [1,0,1,0,0,0,1,0,0,0,0,0,1]
+        XCTAssertTrue(messageBuffer.crcValid)
+
     }
 
   

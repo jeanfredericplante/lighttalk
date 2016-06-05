@@ -42,18 +42,26 @@ class MessageBuffer {
 
     let crcLength = CharacterEncoder.Constants.crcLength
     let bytesInMessage = CharacterEncoder.Constants.bytesInMessage
+    
     var headerValid : Bool {
-        return Array(levels[0...3]) == header
+        guard let headerRead = getMessagePart(.Header) else {
+            return false
+        }
+        return headerRead == header
     }
+    
     var crcValid : Bool {
-        return true
+        guard let crc = getMessagePart(.CRC), body = getMessagePart(.Body) else {
+            return false
+        }
+        return CharacterEncoder.evaluateCRC(body) == crc
     }
     
     func getMessagePart(part: MessagePart) -> [UInt8]? {
         let headerLength = header.count
         let bodyLength = 8 * bytesInMessage
         let messageLength = headerLength + bodyLength + crcLength
-        guard levels.count > messageLength else {
+        guard levels.count >= messageLength else {
             return nil
         }
         switch part {

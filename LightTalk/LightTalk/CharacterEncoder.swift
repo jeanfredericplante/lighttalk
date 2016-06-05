@@ -43,6 +43,10 @@ class CharacterEncoder {
     
 
     func getValidationBits(message: [UInt8]) -> [UInt8] {
+        return CharacterEncoder.evaluateCRC(message)
+    }
+    
+    class func evaluateCRC(message: [UInt8]) -> [UInt8] {
         var crc: UInt8 = 0
         for b in message {
             crc = crc ^ b
