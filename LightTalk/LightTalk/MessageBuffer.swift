@@ -10,7 +10,7 @@ import Foundation
 import CoreMedia
 
 enum MessageState : Equatable {
-    case Blank, Header(Int), Length(Int), Body(Int), CRC(Int), Complete, Invalid
+    case Blank, Header(Int), Length(Int), Body(Int), CRC(Int)
 }
 
 func ==(lhs: MessageState, rhs: MessageState) -> Bool {
@@ -36,6 +36,7 @@ enum MessagePart {
 
 class MessageBuffer {
     var levels: [UInt8] = Array()
+    var charactersDecoded: String = ""
     var time: [CMTime] = []
     var state: MessageState = .Blank
     let header = CharacterEncoder.Constants.messageHeader
@@ -115,16 +116,14 @@ class MessageBuffer {
                 state = .CRC(bitNum + 1); addMessageBit(level, time: time)
             } else {
                 // crc is in
-                if headerValid {
-                    state = .Body(1); addMessageBit(level, time: time)
+                if crcValid {
+                    // add character
+                    let bodyToChar = "todo"
+                    charactersDecoded = charactersDecoded + bodyToChar
                 } else {
-                    return resetMessage()
+                    resetMessage()
                 }
             }
-
-            break
-        case .Complete:
-            break
         default:
             break
         }

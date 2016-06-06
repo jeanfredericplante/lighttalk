@@ -54,6 +54,13 @@ class CharacterEncoder {
         return [crc]
     }
     
+    class func bitsToChar(message: [UInt8]) -> String {
+        var messageChar = 0b00000011
+        for bits in message {
+        }
+        return String(messageChar)
+    }
+    
     
     func getBits() -> [UInt8]? {
         if let message = message {

@@ -38,6 +38,10 @@ class StringEncodingTest: XCTestCase {
 
     }
     
+    func testCharacterDecoding() {
+        XCTAssertEqual(CharacterEncoder.bitsToChar([0,1,1,0,1,1,0,0]), "l")
+    }
+    
     func testMessageValidation() {
         encoder.setMessage("U")
         XCTAssertEqual(encoder.getBits()!, [0,1,0,1,0,1,0,1] )
