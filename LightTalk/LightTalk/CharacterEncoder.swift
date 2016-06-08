@@ -54,11 +54,19 @@ class CharacterEncoder {
         return [crc]
     }
     
-    class func bitsToChar(message: [UInt8]) -> String {
-        var messageChar = 0b00000011
+     class func bitsToChar(message: [UInt8]) -> String? {
+        var messageChar: UInt8 = 0b00000000
+        var mask: UInt8 = 0b10000000
         for bits in message {
+            if bits == 1 {
+                messageChar = messageChar | mask
+            }
+            mask = mask >> 1 // meeh, always 1
         }
-        return String(messageChar)
+        guard let decodedString = NSString(bytes: [messageChar], length: 1, encoding: NSUTF8StringEncoding) as? String  else {
+            return nil
+        }
+        return decodedString
     }
     
     

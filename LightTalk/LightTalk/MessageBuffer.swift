@@ -23,7 +23,7 @@ func ==(lhs: MessageState, rhs: MessageState) -> Bool {
         return bytNum1 == bytNum2
     case (let .CRC(bytNum1), let .CRC(bytNum2)):
         return bytNum1 == bytNum2
-    case (.Blank, .Blank),(.Complete, .Complete),(.Invalid, .Invalid):
+    case (.Blank, .Blank):
         return true
     default:
         return false
