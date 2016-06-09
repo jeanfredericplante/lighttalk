@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreMedia
+import SwiftyDropbox
 
 enum Slope {
     case Up , Down, Equal
@@ -22,6 +23,7 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
     @IBOutlet weak var flashSwitch: UISwitch!
     @IBOutlet weak var flashLevel: UILabel!
     @IBOutlet weak var flashSliderLevel: UISlider!
+    @IBOutlet weak var linkToDropboxButton: UIButton!
     @IBAction func flashSwitchChanged(sender: UISwitch) {
         updateFlashState()
       }
@@ -53,6 +55,10 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
         flashManager.delegate = self
 
         // Do any additional setup after loading the view.
+        
+        if Dropbox.authorizedClient != nil {
+            linkToDropboxButton.hidden = true;
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -134,6 +140,48 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
             }
         }
         return delta
+    }
+    
+    // MARK: - Dropbox
+    @IBAction func linkButtonPressed(sender: AnyObject) {
+        Dropbox.authorizeFromController(self)
+    }
+    
+    @IBAction func testUpload(sender: AnyObject) {
+        //Must have the beginning slash... ugh
+        uploadToDropBox("/hello.txt", fileData: "hello!")
+    }
+    
+    func uploadToDropBox(filePath: String, fileData: String)
+    {
+        if let client = Dropbox.authorizedClient {
+            let encodedFileData = fileData.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+            client.files.upload(path: filePath, body: encodedFileData!).response { response, error in
+                if let metadata = response {
+                    print("*** Upload file ****")
+                    print("Uploaded file name: \(metadata.name)")
+                    print("Uploaded file revision: \(metadata.rev)")
+                    
+                    // Get file (or folder) metadata
+                    client.files.getMetadata(path: "/hello.txt").response { response, error in
+                        print("*** Get file metadata ***")
+                        if let metadata = response {
+                            if let file = metadata as? Files.FileMetadata {
+                                print("This is a file with path: \(file.pathLower)")
+                                print("File size: \(file.size)")
+                            } else if let folder = metadata as? Files.FolderMetadata {
+                                print("This is a folder with path: \(folder.pathLower)")
+                            }
+                        } else {
+                            print(error!)
+                        }
+                    }
+                    
+                } else {
+                    print(error!)
+                }
+            }
+        }
     }
 
 

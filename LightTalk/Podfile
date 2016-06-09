@@ -2,3 +2,4 @@ platform :ios, '8.0'
 use_frameworks!
 workspace 'LightTalk.xcworkspace'
 
+pod 'SwiftyDropbox', '~> 3.0.0'

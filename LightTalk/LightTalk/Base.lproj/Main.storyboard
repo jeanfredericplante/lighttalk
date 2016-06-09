@@ -107,16 +107,34 @@
                                     <constraint firstItem="lod-Rd-8vM" firstAttribute="centerY" secondItem="Voy-TM-AMg" secondAttribute="centerY" id="Wdh-nE-AJN"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHS-Vh-8Gx">
+                                <rect key="frame" x="237" y="507" width="127" height="30"/>
+                                <state key="normal" title="Link With Dropbox"/>
+                                <connections>
+                                    <action selector="linkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TNz-24-r13"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWn-Mu-kNf">
+                                <rect key="frame" x="228" y="545" width="145" height="30"/>
+                                <state key="normal" title="Test Dropbox Upload"/>
+                                <connections>
+                                    <action selector="testUpload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cY8-hU-DjY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Voy-TM-AMg" firstAttribute="top" secondItem="dJY-D9-pox" secondAttribute="bottom" constant="3" id="1c4-r7-HDD"/>
                             <constraint firstItem="dJY-D9-pox" firstAttribute="top" secondItem="CpC-rD-rQF" secondAttribute="bottom" constant="8" id="6YW-tA-UWQ"/>
+                            <constraint firstItem="JWn-Mu-kNf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BVv-Da-QRP"/>
                             <constraint firstItem="Voy-TM-AMg" firstAttribute="trailing" secondItem="dJY-D9-pox" secondAttribute="trailing" id="Guz-Gj-uCh"/>
                             <constraint firstItem="Voy-TM-AMg" firstAttribute="height" secondItem="dJY-D9-pox" secondAttribute="height" id="LXN-wX-wP9"/>
                             <constraint firstItem="dJY-D9-pox" firstAttribute="centerX" secondItem="CpC-rD-rQF" secondAttribute="centerX" id="NWN-9B-eeO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vHS-Vh-8Gx" secondAttribute="bottom" constant="63" id="OOX-pP-1gj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CpC-rD-rQF" secondAttribute="trailing" constant="-20" id="VCW-h5-oNQ"/>
                             <constraint firstItem="lod-Rd-8vM" firstAttribute="trailing" secondItem="2Fo-fW-jkx" secondAttribute="trailing" id="Wwf-OR-Cn2"/>
+                            <constraint firstItem="vHS-Vh-8Gx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b1A-h0-UyL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JWn-Mu-kNf" secondAttribute="bottom" constant="25" id="cFO-D3-bQi"/>
                             <constraint firstItem="dJY-D9-pox" firstAttribute="width" secondItem="CpC-rD-rQF" secondAttribute="width" id="gHi-to-x6G"/>
                             <constraint firstItem="lod-Rd-8vM" firstAttribute="leading" secondItem="2Fo-fW-jkx" secondAttribute="leading" id="hXY-6X-jle"/>
                             <constraint firstItem="CpC-rD-rQF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="r6T-ZY-Oeh"/>
@@ -130,6 +148,7 @@
                         <outlet property="flashLevel" destination="hZX-JX-HPI" id="vZq-8x-rIV"/>
                         <outlet property="flashSliderLevel" destination="UUO-eb-vC0" id="BlW-FI-AX1"/>
                         <outlet property="flashSwitch" destination="BrN-Bt-eMe" id="oDW-yx-6CP"/>
+                        <outlet property="linkToDropboxButton" destination="vHS-Vh-8Gx" id="JKq-xx-MtQ"/>
                         <outlet property="messageInput" destination="2Fo-fW-jkx" id="R8X-Ft-a4i"/>
                         <outlet property="messageRead" destination="lod-Rd-8vM" id="1Lf-SK-1O3"/>
                     </connections>
