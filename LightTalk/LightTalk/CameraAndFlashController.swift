@@ -237,7 +237,7 @@ class CameraAndFlashController : NSObject, AVCaptureVideoDataOutputSampleBufferD
     // MARK: - Delegate methods
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
         let capturedImage : UIImage = imageFromSampleBuffer(sampleBuffer)
-        let frameTime : CMTime = CMSampleBufferGetDecodeTimeStamp(sampleBuffer)
+        let frameTime : CMTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
         delegate?.didGetCameraFrame(capturedImage, time: frameTime)
     }
     

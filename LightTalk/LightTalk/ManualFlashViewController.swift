@@ -169,7 +169,7 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
     var scanDataAsCSVString: String {
         var samplesAsCSV = "time,index,brighness,delta\n"
         for (idx,time) in scanTime.enumerate() {
-            let row = "\(time), \(scanDelta[idx]), \(scanIndex[idx]), \(scanBrightness[idx]);\n"
+            let row = "\(time), \(scanIndex[idx]), \(scanBrightness[idx]), \(scanDelta[idx])\n"
             samplesAsCSV = samplesAsCSV + row
         }
        return samplesAsCSV
@@ -188,7 +188,7 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
     
     func saveScanToDropbox() {
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "dd.MM.yy HH:mm"
+        formatter.dateFormat = "dd.MM.yy HH.mm.ss"
         let filePath = "/lt_\(formatter.stringFromDate(NSDate())).csv"
         uploadToDropBox(filePath, fileData: scanDataAsCSVString)
     }
@@ -204,7 +204,7 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
                     print("Uploaded file revision: \(metadata.rev)")
                     
                     // Get file (or folder) metadata
-                    client.files.getMetadata(path: "/hello.txt").response { response, error in
+                    client.files.getMetadata(path: filePath).response { response, error in
                         print("*** Get file metadata ***")
                         if let metadata = response {
                             if let file = metadata as? Files.FileMetadata {
