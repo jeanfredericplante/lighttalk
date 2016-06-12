@@ -14,6 +14,7 @@ enum Slope {
     case Up , Down, Equal
 }
 
+
 class ManualFlashViewController: UIViewController, CameraAndFlashControllerDelegate {
 
     @IBOutlet weak var messageInput: UITextField!
@@ -32,15 +33,19 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
         updateFlashState()
     }
     @IBAction func readMessagePressed(sender: UIButton) {
-        startCamera()
+        toggleCamera()
     }
     
     @IBOutlet weak var messageRead: UILabel!
     
+    @IBOutlet weak var readMessageButton: UIButton!
+    
     let flashManager = CameraAndFlashController()
+  
     var scanIndex: [Int] = []
     var scanBrightness: [Int] = []
     var scanDelta:[Int] = []
+    var scanTime: [Double] = []
     let messageBuffer: MessageBuffer = MessageBuffer()
     
     
@@ -100,26 +105,36 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
     }
     
     // MARK: - Camera
-    func startCamera() {
-        let configureCompleteAction = { (success: Bool) -> Void in
-            if success {
-                self.flashManager.startCamera()  // starts camera and sets up the video session
-            } else {
-                printDebug("can't start video")
+    func toggleCamera() {
+        switch flashManager.readState {
+        case .NotReading:
+            let configureCompleteAction = { (success: Bool) -> Void in
+                if success {
+                    self.flashManager.startCamera()  // starts camera and sets up the video session
+                    self.readMessageButton.setTitle("Stop", forState: UIControlState.Normal)
+                } else {
+                    printDebug("can't start video")
+                }
             }
+            flashManager.configure(configureCompleteAction)
+        case .Reading:
+            flashManager.stopCamera()
+            self.readMessageButton.setTitle("Start", forState: UIControlState.Normal)
+            saveScanToDropbox()
+            clearScanData()
         }
-        flashManager.configure(configureCompleteAction)
+        
     }
     
     
     func didGetCameraFrame(frame: UIImage, time: CMTime) {
         if let brightness = frame.averageBrightness {
-            let slope = addScanDataPoint(Int(brightness))
+            let slope = addScanDataPoint(Int(brightness), time: time)
             dispatch_async(dispatch_get_main_queue(), {self.messageRead.text = "\(brightness) + \(slope)"})
        }
     }
     
-    func addScanDataPoint(brightness: Int) -> Slope {
+    func addScanDataPoint(brightness: Int, time: CMTime) -> Slope {
         var delta : Slope = .Equal
         if let lastIndex = scanIndex.last, lastScanBrightness = scanBrightness.last {
             scanIndex.append(lastIndex + 1)
@@ -128,7 +143,9 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
             scanIndex.append(0)
             scanDelta.append(0)
         }
+        
         scanBrightness.append(brightness)
+        scanTime.append(CMTimeGetSeconds(time))
         if let lastDelta = scanDelta.last {
             switch lastDelta {
             case 40...255:
@@ -142,6 +159,23 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
         return delta
     }
     
+    func clearScanData() {
+        scanTime = []
+        scanDelta = []
+        scanIndex = []
+        scanBrightness = []
+    }
+    
+    var scanDataAsCSVString: String {
+        var samplesAsCSV = "time,index,brighness,delta\n"
+        for (idx,time) in scanTime.enumerate() {
+            let row = "\(time), \(scanDelta[idx]), \(scanIndex[idx]), \(scanBrightness[idx]);\n"
+            samplesAsCSV = samplesAsCSV + row
+        }
+       return samplesAsCSV
+    }
+    
+    
     // MARK: - Dropbox
     @IBAction func linkButtonPressed(sender: AnyObject) {
         Dropbox.authorizeFromController(self)
@@ -150,6 +184,13 @@ class ManualFlashViewController: UIViewController, CameraAndFlashControllerDeleg
     @IBAction func testUpload(sender: AnyObject) {
         //Must have the beginning slash... ugh
         uploadToDropBox("/hello.txt", fileData: "hello!")
+    }
+    
+    func saveScanToDropbox() {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "dd.MM.yy HH:mm"
+        let filePath = "/lt_\(formatter.stringFromDate(NSDate())).csv"
+        uploadToDropBox(filePath, fileData: scanDataAsCSVString)
     }
     
     func uploadToDropBox(filePath: String, fileData: String)

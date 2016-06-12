@@ -96,7 +96,6 @@
                                         </constraints>
                                         <state key="normal" title="Read"/>
                                         <connections>
-                                            <action selector="messageSendPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zuI-oa-yrk"/>
                                             <action selector="readMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ag5-fm-chr"/>
                                         </connections>
                                     </button>
@@ -151,6 +150,7 @@
                         <outlet property="linkToDropboxButton" destination="vHS-Vh-8Gx" id="JKq-xx-MtQ"/>
                         <outlet property="messageInput" destination="2Fo-fW-jkx" id="R8X-Ft-a4i"/>
                         <outlet property="messageRead" destination="lod-Rd-8vM" id="1Lf-SK-1O3"/>
+                        <outlet property="readMessageButton" destination="yhS-uR-Civ" id="oRd-DT-Egd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

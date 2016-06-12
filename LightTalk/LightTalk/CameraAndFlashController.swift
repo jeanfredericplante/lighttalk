@@ -14,6 +14,9 @@ enum FlashLevel: Float {
     case Zero = 0.0, One = 0.25, Two = 0.5, Three = 0.75, Four = 1.0
 }
 
+enum ReadingState {
+    case NotReading, Reading
+}
 
 let messageQueueSent = "com.fantasticwhalelabs.messageQueueSent"
 
@@ -36,6 +39,7 @@ class CameraAndFlashController : NSObject, AVCaptureVideoDataOutputSampleBufferD
     let sessionQueue = dispatch_queue_create("CameraRecorderQueue", DISPATCH_QUEUE_SERIAL)
     let dataFrameQueue = dispatch_queue_create("DataFrameQueue", DISPATCH_QUEUE_SERIAL)
     var delegate : CameraAndFlashControllerDelegate?
+    var readState: ReadingState = .NotReading
 
     // Torch variables
     var cameraWithTorch: AVCaptureDevice?
@@ -130,6 +134,7 @@ class CameraAndFlashController : NSObject, AVCaptureVideoDataOutputSampleBufferD
                 NSLog("about to start the camera preview")
                 self.session.startRunning()
                 NSLog("camera preview started")
+                self.readState = .Reading
             }
         } else {
             print("starting camera aborted: session already running")
@@ -141,6 +146,7 @@ class CameraAndFlashController : NSObject, AVCaptureVideoDataOutputSampleBufferD
             print("stopping camera")
             dispatch_async(sessionQueue) {
                 self.session.stopRunning()
+                self.readState = .NotReading
                 for output in self.session.outputs {
                     if let avFileOutput = output as? AVCaptureFileOutput {
                         self.session.removeOutput(avFileOutput)
