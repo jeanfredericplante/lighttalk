@@ -58,6 +58,9 @@ class StringEncodingTest: XCTestCase {
         XCTAssertEqual(encoder.getFramedMessage()!, [1,0,1,0,0,1,0,1,0,1,0,1,0] )
         encoder.setMessage(" ")
         XCTAssertEqual(encoder.getFramedMessage()!, [1,0,1,0,0,0,1,0,0,0,0,0,1] )
+        encoder.setMessage("l")
+        XCTAssertEqual(encoder.getFramedMessage()!, [1,0,1,0,0,1,1,0,1,1,0,0,0] )
+
     }
     
     func testMessageBuffer() {
