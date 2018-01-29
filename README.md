@@ -9,3 +9,4 @@ I have left this project aside as I am focusing on other side projects but feel 
 - in-progress decoding (see matlab file for wip processing)
 
 ## Example of raw reading
+![alt text](https://github.com/jeanfredericplante/lighttalk/blob/master/LightTalk/resource/message_decoding.png)
