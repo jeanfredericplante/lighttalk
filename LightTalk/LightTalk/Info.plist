@@ -25,7 +25,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>db-dropbox_key</string>
+				<string>db-edited-dropbox-key</string>
 			</array>
 		</dict>
 	</array>
